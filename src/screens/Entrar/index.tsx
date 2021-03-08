@@ -1,7 +1,7 @@
 import * as React from 'react';
-import { View, StyleSheet, Text, Button, TextInput} from 'react-native';
+import {ImageBackground, StyleSheet, Text, Button, TextInput} from 'react-native';
 
-import PlanodeFundo from '
+import PlanodeFundo from './../../assets/backgroung.png';
 
 import EmailIcon from './../../assets/email.svg';
 
@@ -18,13 +18,14 @@ export default class LoginScreens extends React.Component<LoginScreensProps, Log
 
   public render() {
     return (
-      <View>
+      <ImageBackground source = {require('./../../assets/background.png')} 
+                                 style={{width:'100%', height:'100%'}}>
+                                     
          <Text>LoginScreens Component</Text>
          <TextInput placeholder="Digite seu e-mail"/>
          <TextInput placeholder="Digite sua senha"/>
-         <Button title= "Entrar" onPress={function() {console.log('teste')}} />
-      </View>
-      
+         <Button title= "Entrar" onPress={function() {console.log('teste')}}/>
+      </ImageBackground>
     );
   }
 }
