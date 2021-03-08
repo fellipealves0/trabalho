@@ -1,6 +1,8 @@
 import * as React from 'react';
 import { View, StyleSheet, Text, Button, TextInput } from 'react-native';
 
+import EmailIcon from './../../assets/email.svg';
+
 export interface LoginScreensProps {}
 
 export interface LoginScreensState {}
