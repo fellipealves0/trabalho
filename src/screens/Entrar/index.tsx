@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { View, StyleSheet, Text, Button, TextInput} from 'react-native';
 
-import PlanodeFundo from './../../assets/';
+import PlanodeFundo from '
 
 import EmailIcon from './../../assets/email.svg';
 
