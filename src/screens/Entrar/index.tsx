@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { View, StyleSheet, Text, Button } from 'react-native';
+import { View, StyleSheet, Text, Button, TextInput } from 'react-native';
 
 export interface LoginScreensProps {}
 
@@ -16,8 +16,11 @@ export default class LoginScreens extends React.Component<LoginScreensProps, Log
     return (
       <View>
          <Text>LoginScreens Component</Text>
+         <TextInput placeholder="Digite seu e-mail"/>
+         <TextInput placeholder="Digite sua senha"/>
          <Button title= "Entrar" onPress={function() {console.log('teste')}} />
       </View>
+      
     );
   }
 }
