@@ -20,3 +20,6 @@ export default class SignUp extends React.Component<SignUpProps, SignUpState> {
     );
   }
 }
+
+
+<Text style={{color:'white',fontSize: 30}}>LoginScreens Component</Text>
