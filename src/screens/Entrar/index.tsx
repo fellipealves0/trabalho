@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {ImageBackground, StyleSheet, Text, Button, TextInput} from 'react-native';
+import {ImageBackground, StyleSheet, Text, Button, TextInput, IconLogo,} from 'react-native';
 
 export interface LoginScreensProps {}
 
@@ -16,11 +16,13 @@ export default class LoginScreens extends React.Component<LoginScreensProps, Log
     return (
       <ImageBackground source = {require('./../../assets/background.png')} 
                                  style={{width:'100%', height:'100%'}}>
-                                     
-         <Text>LoginScreens Component</Text>
-         <TextInput placeholder="Digite seu e-mail"/>
-         <TextInput placeholder="Digite sua senha"/>
+
+        <view style={{padding:20}}>
+        <IconLogo></IconLogo>
+         <TextInput style={{color:'Black', fontSize:20}} placeholder="Digite seu e-mail"/>
+         <TextInput style={{color:'Black', fontSize:20}} placeholder="Digite sua senha"/>
          <Button title= "Entrar" onPress={function() {console.log('teste')}}/>
+        </view>
       </ImageBackground>
     );
   }
