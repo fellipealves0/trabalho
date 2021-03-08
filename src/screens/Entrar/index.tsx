@@ -18,12 +18,35 @@ export default class LoginScreens extends React.Component<LoginScreensProps, Log
                                  style={{width:'100%', height:'100%'}}>
 
         <view style={{padding:20}}>
-        <Image source= {require('./../../assets/barber.svg')}
-                                style={{width:'90%', height:'80%', padding:90,position:'center' }}></Image>
-         <TextInput style={{color:'Black', fontSize:20}} placeholder="Digite seu e-mail"/>
-         <TextInput style={{color:'Black', fontSize:20}} placeholder="Digite sua senha"/>
-         <Button title= "Entrar" onPress={function() {console.log('teste')}}/>
+
+        <Image source= {require('./../../assets/barber.svg')} style={{
+            width:'60%',
+            height:'60%', 
+            padding:95, 
+            flex:1,
+            justifyContent:'center'
+        }}
+        ></Image>
+
+         <TextInput style={{
+             color:'Black', 
+             fontSize:30,
+             flex:1,
+             textAlign:'center'
+        }} placeholder="Digite seu e-mail"/>
+
+         <TextInput style={{
+             color:'Black', 
+             fontSize:30
+        }} placeholder="Digite sua senha"/>
+
+         <Button style={{
+             color:'Black',
+         }}
+         title= "Entrar" onPress={function() {console.log('teste')}}/>
+
         </view>
+
       </ImageBackground>
 
    
