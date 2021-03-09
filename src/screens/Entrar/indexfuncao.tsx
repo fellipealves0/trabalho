@@ -7,10 +7,10 @@ export interface LoginScreenProps {
 export default function LoginScreen (props: LoginScreenProps) {
     return (
       <ImageBackground source={require('./../../../assets/background.png')}
-      style={styles.background}>
+      style={style.background}>
 
-    <View style={styles.container}>
-    <Text style={styles.logo}>APP</Text>
+    <View style={style.container}>
+    <Text style={style.logo}>APP</Text>
     </View>
 
       </ImageBackground>
