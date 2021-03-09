@@ -20,17 +20,18 @@ export default function SignUp (props: SignUpProps) {
 </View>
 
 <View style={styles.conteiner}>
+<Text>Usuário</Text>
 <Text>Email:</Text>
 <Text>Senha:</Text>
 
 <View style={styles.conteinerInput}>
+<TextInput placeholder="Digite seu usuário"/>
 <TextInput placeholder="Digite seu e-mail"/>
 <TextInput placeholder="Digite sua senha"/>
 </View>
 
 </View>
 
-<Button title= "Entrar" onPress={function() {console.log('teste')}}/>
 
 </ImageBackground>
     );
