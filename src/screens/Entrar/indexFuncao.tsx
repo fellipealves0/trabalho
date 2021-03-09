@@ -17,10 +17,12 @@ style={{justifyContent:'center',alignItems:"center",padding:150, flex:1,}}
 </View>
 
 <View style={styles.conteiner}>
+<Text>Usuário</Text>
 <Text>Email:</Text>
 <Text>Senha:</Text>
 
 <View style={styles.conteinerInput}>
+<TextInput placeholder="Digite seu usuário"/>
 <TextInput placeholder="Digite seu e-mail"/>
 <TextInput placeholder="Digite sua senha"/>
 </View>
