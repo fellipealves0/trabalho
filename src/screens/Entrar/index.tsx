@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {ImageBackground, StyleSheet,Button, TextInput,Image} from 'react-native';
+import {ImageBackground, StyleSheet,Button, TextInput,Image, Text,TouchableOpacity, View} from 'react-native';
 
 export interface LoginScreensProps {}
 
@@ -13,40 +13,37 @@ export default class LoginScreens extends React.Component<LoginScreensProps, Log
   }
 
   public render() {
-    return (
-      <ImageBackground source = {require('./../../assets/background.png')} 
-                                 style={{width:'100%', height:'100%'}}>
+    return (<ImageBackground source = {require('./../../assets/background.jpeg')} 
+                                       style={styles.background}>
+                                       
+      <View>
 
-        <view style={{padding:20}}>
+    <Image source= {require('./../../assets/Logo.png')}
+      style={{justifyContent:'center',alignItems:"center",padding:150, flex:1,}}
+    ></Image> 
 
-        <Image source= {require('./../../assets/barber.svg')} style={{
-            height:'80%', 
-            padding:85, 
-            flex:1,
-            justifyContent:'center',
+      </View>
 
-        }}
-        ></Image>
+    <View style={styles.conteiner}>
+         <Text>Email:</Text>
+         <Text>Senha:</Text>
+      
+   <View style={styles.conteinerInput}>
+          <TextInput placeholder="Digite seu e-mail"/>
+          <TextInput placeholder="Digite sua senha"/>
+    </View>
+    
+    </View>
 
-         <TextInput style={{
-             color:'Black', 
-             fontSize:30,
-             flex:1,
-             textAlign:'center'
-        }} placeholder="Digite seu e-mail"/>
+<Button title= "Entrar" onPress={function() {console.log('teste')}}/>
 
-         <TextInput style={{
-             color:'Black', 
-             fontSize:30
-        }} placeholder="Digite sua senha"/>
-
-         <Button title= "Entrar" onPress={function() {console.log('teste')}}/>
-
-        </view>
-
-      </ImageBackground>
-
-   
-    );
-  }
+</ImageBackground>
+);
 }
+}
+const styles= StyleSheet.create({
+  background:{width:'100%', height:'100%'},
+  conteiner:{flex:1, padding:10, flexDirection:'column', justifyContent:'center', alignItems:'stretch', color:'black', fontSize:50},
+  conteinerInput:{color:'white', fontSize:50,flex:1,textAlign:'center'},
+  logo:{}
+})

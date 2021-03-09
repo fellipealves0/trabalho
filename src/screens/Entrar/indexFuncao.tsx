@@ -4,7 +4,7 @@ import { View, Text, Button, ImageBackground, TextInput, StyleSheet, Image } fro
 export interface LoginScreensProps {
 }
 
-export function LoginScreens (props: LoginScreensProps) {
+export default function LoginScreens (props: LoginScreensProps) {
     return (<ImageBackground source = {require('./../../assets/background.jpeg')} 
     style={styles.background}>
     
