@@ -2,10 +2,10 @@ import * as React from 'react';
 import {ImageBackground, StyleSheet,Button, TextInput,Image, Text,TouchableOpacity, View} from 'react-native';
 import { Avatar } from 'react-native-elements/dist/avatar/Avatar';
 
-export interface LoginScreenProps {
+export interface SignUpScreenProps {
 }
 
-export default function LoginScreen (props: LoginScreenProps) {
+export default function SignUpScreen (props: SignUpScreenProps) {
     return (
       <ImageBackground source={require('./../../assets/Background.jpeg')}
                                  style={style.background}>
