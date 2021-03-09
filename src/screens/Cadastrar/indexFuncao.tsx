@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { View, Text, Button, ImageBackground, TextInput, StyleSheet, Image } from 'react-native';
+import { Avatar } from 'react-native-elements';
 
 export interface SignUpProps {
 }
@@ -7,12 +8,14 @@ export interface SignUpProps {
 export default function SignUp (props: SignUpProps) {
     return (<ImageBackground source = {require('./../../assets/background.jpeg')} 
     style={styles.background}>
-    
-<View>
 
-<Image source= {require('./../../assets/Logo.png')}
-style={{justifyContent:'center',alignItems:"center",padding:150, flex:1,}}
-></Image> 
+<Avatar size="xlarge"
+    rounded
+    title="FE"
+    containerStyle={{backgroundColor:'grey'}}
+    onPress={() => console.log("Adcionar Foto")}
+    activeOpacity={0.5}/>
+<View>
 
 </View>
 

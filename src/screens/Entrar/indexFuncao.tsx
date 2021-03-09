@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { View, Text, Button, ImageBackground, TextInput, StyleSheet, Image } from 'react-native';
+import { Avatar } from 'react-native-elements';
 
 export interface LoginScreensProps {
 }
@@ -7,7 +8,7 @@ export interface LoginScreensProps {
 export default function LoginScreens (props: LoginScreensProps) {
     return (<ImageBackground source = {require('./../../assets/background.jpeg')} 
     style={styles.background}>
-    
+        
 <View>
 
 <Image source= {require('./../../assets/Logo.png')}
