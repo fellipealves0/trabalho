@@ -6,25 +6,34 @@ export interface LoginScreensProps {
 }
 
 export default function LoginScreens (props: LoginScreensProps) {
-    return (<ImageBackground source = {require('./../../assets/background.jpeg')} 
-    style={styles.background}>
-
-<View>
+    return (
+                <ImageBackground source = {require('./../../assets/background.jpeg')} 
+                 style={styles.background}>
+   <View>
 
 <Image source= {require('./../../assets/Logo.png')}
-style={{justifyContent:'center',alignItems:"center",padding:150, flex:1,}}
-></Image> 
+style={{justifyContent:'center',alignItems:"center",padding:150, flex:1,}} /> 
 
-<Input label="Email:" inputStyle={{color:'white'}} placeholder="Digite seu email" lefIcon={{name:'perm_identity',color:'white'}}/>
-<Input label="Senha" inputStyle={{color:'white'}} placeholder="Digite sua senha" secureTextEntry />
+<Input style={{fontSize:20}} inputStyle={{color:'white'}} placeholder="Digite seu email" lefIcon={{name:'perm_identity',color:'white'}} placeholderTextColor='white' InputStyle={{color:'white'}}/>
+<Input style={{fontSize:20}} inputStyle={{color:'white'}} placeholder="Digite sua senha" lefIcon={{name:'lock',color:'white'}} secureTextEntry placeholderTextColor='white' InputStyle={{color:'white'}}/>
 
-</View>
+<Button>
 
-<Button title= "Entrar"
- onPress={function() {console.log('teste')}}/>
+<Button style={{paddingTop: 50, left:62, width:236, }}
+title= "Entrar"
+onPress={function() {console.log('teste')}} />
+
+<Button style={{paddingTop: 50, left:62, width:236, }}
+title= "Cadastrar"
+onPress={function() {console.log('teste')}} />
+
+</Button>
+
+
+    </View>
 
 </ImageBackground>
-    );
+);
 }
 
 const styles= StyleSheet.create({
