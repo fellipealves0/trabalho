@@ -24,7 +24,7 @@ export default class LoginScreens extends React.Component<LoginScreensProps, Log
 
       </View>
 
-    <View style={styles.conteiner}>
+    <View style={styles.container}>
          <Text>Email:</Text>
          <Text>Senha:</Text>
       
@@ -41,9 +41,14 @@ export default class LoginScreens extends React.Component<LoginScreensProps, Log
 );
 }
 }
-const styles= StyleSheet.create({
-  background:{width:'100%', height:'100%'},
-  conteiner:{flex:1, padding:10, flexDirection:'column', justifyContent:'center', alignItems:'stretch', color:'black', fontSize:50},
-  conteinerInput:{color:'white', fontSize:50,flex:1,textAlign:'center'},
-  logo:{}
+const styles = StyleSheet.create({
+  background: {width:'100%',height:'100%'},
+  container: {
+      flex:1,
+      padding:10,
+      flexDirection:'column',
+      justiftyContent:'center',
+      alignItens: 'stretch',
+  },
+  logo:{color:'white', fontSize:50,textAlign:'center'}
 })
