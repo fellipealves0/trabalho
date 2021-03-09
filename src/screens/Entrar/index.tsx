@@ -20,11 +20,11 @@ export default class LoginScreens extends React.Component<LoginScreensProps, Log
         <view style={{padding:20}}>
 
         <Image source= {require('./../../assets/barber.svg')} style={{
-            width:'60%',
-            height:'60%', 
-            padding:95, 
+            height:'80%', 
+            padding:85, 
             flex:1,
-            justifyContent:'center'
+            justifyContent:'center',
+
         }}
         ></Image>
 
@@ -40,10 +40,7 @@ export default class LoginScreens extends React.Component<LoginScreensProps, Log
              fontSize:30
         }} placeholder="Digite sua senha"/>
 
-         <Button style={{
-             color:'Black',
-         }}
-         title= "Entrar" onPress={function() {console.log('teste')}}/>
+         <Button title= "Entrar" onPress={function() {console.log('teste')}}/>
 
         </view>
 
