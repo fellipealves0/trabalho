@@ -1,13 +1,12 @@
 import * as React from 'react';
 import { ActivityIndicator } from 'react-native';
-import {ImageBackground, StyleSheet,Button, TextInput,Text,TouchableOpacity, View, LogBox} from 'react-native';
+import {ImageBackground, StyleSheet, TextInput,Text,TouchableOpacity, View, LogBox} from 'react-native';
 import { Image } from 'react-native-elements/dist/image/Image';
 import { NavigationContainer } from '@react-navigation/native';
 import {useNavigation} from '@react-navigation/native';
-import { SocialIcon } from 'react-native-elements'
-import { Icon } from 'react-native-elements/dist/icons/Icon';
+import { Button, Input, SocialIcon } from 'react-native-elements'
 import { createStackNavigator } from '@react-navigation/stack';
-
+import Icon from 'react-native-vector-icons/FontAwesome';
 
 export interface LoginScreenProps {
 }
@@ -20,32 +19,52 @@ export default function LoginScreen (props: LoginScreenProps) {
     <Image source={require('./../../assets/logo1.png')}
      style={{flex:1, padding:150,margin:7}}/>
 
-    <SocialIcon    
-     type='instagram'
+    <View style={styles.container}> 
+         <Input placeholder='Digite seu email' 
+             leftIcon={
+             <Icon
+             name='user'
+             size={20}
+             color='black'
+             /> }/>
 
-     
-     />
-     <SocialIcon    
-     type='facebook'
-     />  
+        <Input placeholder='Digite sua senha' 
+             leftIcon={
+             <Icon
+             name='lock'
+             size={20}
+             color='black'
+             /> }
+             secureTextEntry={true}/>
 
-        <Button
-        title="Go to Details"
-        onPress={() => navigator.navigate('Cadastrar')}
-      />
-         
-         
-     
+        </View>
+
+     <View>
+     <Button style={styles.button}
+      title="Entrar"
+      buttonStyle={{borderRadius:30}}
+      onPress={() => console.log('test')}/>
+      </View>
+    
+    <Text style={styles.cadastro}>Não possui cadastro? {'\n'} Clique aqui para se cadastrar</Text>
+
+   <View style={styles.iconSocial}>
+        <SocialIcon
+        type='instagram'
+        onPress={() => console.log('test')}/>
+        
+        <SocialIcon
+        type='facebook'
+        onPress={() => console.log('test')}/>
+
+        <SocialIcon
+        type='google'
+        onPress={() => console.log('test')}/>
+        
+         </View>
 
     </View>
       
-     <View style={styles.container}>
-
-
-     </View>
-
-     
-
   </ImageBackground>
 );
 }
@@ -55,5 +74,10 @@ const styles = StyleSheet.create({
         justiftyContent:'center',
         alignItens: 'center',
     },
-    logo:{color:'white', fontSize:50,textAlign:'center',}
+    logo:{color:'white', fontSize:50,textAlign:'center',},
+    iconSocial:{alignItems: 'center', justifyContent: 'center'},
+    button:{margin:10},
+    cadastro:{color:'black',fontSize:15,textDecorationLine: 'none', textAlign:'center', margin:11,}
+
+
 });
