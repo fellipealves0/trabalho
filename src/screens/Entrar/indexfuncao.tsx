@@ -1,6 +1,7 @@
 import * as React from 'react';
-import {ImageBackground, StyleSheet,Button, TextInput,Image, Text,TouchableOpacity, View} from 'react-native';
+import {ImageBackground, StyleSheet,Button, TextInput,Text,TouchableOpacity, View, LogBox} from 'react-native';
 import { Avatar } from 'react-native-elements/dist/avatar/Avatar';
+
 
 export interface LoginScreenProps {
 }
@@ -8,30 +9,23 @@ export interface LoginScreenProps {
 export default function LoginScreen (props: LoginScreenProps) {
     return (
       <ImageBackground source={require('./../../assets/Background.jpeg')}
-                                 style={style.background}>
+                                 style={{width:'100%', height:'100%'}}>
 
     <View style={style.container}>
-    <Text style={style.logo}>APP</Text>
-    <Avatar 
-       size="xlarge"
-       rounded
-       title="CR"
-       containerStyle={{backgroundColor:'grey'}}
-       onPress={() => console.log("Adcionar Foto")}
-       activeOpacity={0.5}/>
+        <Text style={style.logo}>APP</Text>
     </View>
-
-      </ImageBackground>
-    );
+    
+        </ImageBackground>
+);
 }
 const style = StyleSheet.create({
     background: {width:'100%',height:'100%'},
-    container: {
-        flex:1,
-        padding:10,
+    container: {padding:30,justiftyContent:'center', alignItens: 'center', flex:1,
+       
+        
         flexDirection:'column',
-        justiftyContent:'center',
-        alignItens: 'stretch',
+
+       
     },
-    logo:{color:'white', fontSize:50,textAlign:'center'}
+    logo:{color:'white', fontSize:50,textAlign:'center',}
 });
