@@ -1,6 +1,7 @@
 import * as React from 'react';
 import {ImageBackground, StyleSheet,Button, TextInput,Text,TouchableOpacity, View, LogBox, Image} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
+
 import { Avatar } from 'react-native-elements/dist/avatar/Avatar';
 
 
@@ -9,13 +10,16 @@ export interface LoginScreenProps {
 
 export default function LoginScreen (props: LoginScreenProps) {
     return (
-      <ImageBackground source={require('./../../assets/Background.jpeg')}
+      <ImageBackground source={require('./../../assets/Logo.png')}
                                    style={styles.background}>
-
-    <View style={styles.container}>
+    
+<View style={styles.container}>
       
      </View>
-     <Image source={require('./../../assets/Logo.png')}></Image>
+     <View>
+         
+     </View>
+    
   </ImageBackground>
 );
 }
