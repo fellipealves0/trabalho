@@ -11,12 +11,14 @@ export interface LoginScreenProps {
 
 export default function LoginScreen (props: LoginScreenProps) {
     return (
-      <ImageBackground source={require('./../../assets/Background.jpeg')}
+      <ImageBackground source={require('./../../assets/fundo2.jpg')}
                                    style={{width:'100%',height:'100%'}}>
     <View>
     <Image source={require('./../../assets/logo1.png')}
-     style={{left:30, width:286, flex:1, padding:150,}}/>
+     style={{left:30, width:220, flex:1, padding:150,}}/>
     </View>
+
+    
     
 
      <View style={styles.container}>
