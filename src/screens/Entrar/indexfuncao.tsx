@@ -8,10 +8,23 @@ import { Button, Input, SocialIcon } from 'react-native-elements'
 import { createStackNavigator } from '@react-navigation/stack';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
-export interface LoginScreenProps {
-}
+
+export interface LoginScreenProps {}
 
 export default function LoginScreen (props: LoginScreenProps) {
+
+    const [email, setEmail] = React.useState('test@test.com.br');
+    const [senha, setSenha] = React.useState('12345');
+
+
+    const SignIn = () => {
+        if (email.trim() !== '' && senha.trim() !== '') 
+            console.log('Logado com sucesso');
+        else {
+            // alerta de email ou senha errado
+            alert('E-mail e/ou senha não correspondem!');
+          }; 
+
     return (
       <ImageBackground source={require('./../../assets/fundo2.jpg')}
                                    style={{width:'100%',height:'100%'}}>
@@ -26,7 +39,9 @@ export default function LoginScreen (props: LoginScreenProps) {
              name='user'
              size={20}
              color='black'
-             /> }/>
+             />}
+             value={email}
+             onChangeText={setEmail}/>
 
         <Input placeholder='Digite sua senha' 
              leftIcon={
@@ -35,7 +50,9 @@ export default function LoginScreen (props: LoginScreenProps) {
              size={20}
              color='black'
              /> }
-             secureTextEntry={true}/>
+             secureTextEntry={true}
+             value={senha}
+             onChangeText={setSenha}/>
 
         </View>
 
@@ -43,7 +60,7 @@ export default function LoginScreen (props: LoginScreenProps) {
      <Button style={styles.button}
       title="Entrar"
       buttonStyle={{borderRadius:30}}
-      onPress={() => navigation.log('test')}/>
+      onPress={() => console.log('Cadastrar')}/>
       </View>
     
     <Text style={styles.cadastro}>Não possui cadastro? {'\n'} Clique aqui para se cadastrar</Text>
@@ -77,7 +94,5 @@ const styles = StyleSheet.create({
     logo:{color:'white', fontSize:50,textAlign:'center',},
     iconSocial:{flexDirection:'row', alignItems: 'center', justifyContent: 'center'},
     button:{margin:10},
-    cadastro:{color:'black',fontSize:15,textDecorationLine: 'none', textAlign:'center', margin:11,}
-
-
+    cadastro:{color:'black',fontSize:15,textDecorationLine: 'none', textAlign:'center', margin:11,},
 });

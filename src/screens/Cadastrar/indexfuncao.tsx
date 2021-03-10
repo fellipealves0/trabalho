@@ -8,10 +8,10 @@ import { Button, Input, SocialIcon } from 'react-native-elements'
 import { createStackNavigator } from '@react-navigation/stack';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
-export interface SignupScreenProps {
-}
+export interface SignupScreenProps {}
 
-export default function SignupScreen (props: SignupScreenProps) {
+export default function SignupScreen (props: SignupScreenProps)
+{
     return (
       <ImageBackground source={require('./../../assets/fundo2.jpg')}
                                    style={{width:'100%',height:'100%'}}>
@@ -78,6 +78,5 @@ const styles = StyleSheet.create({
     iconSocial:{flexDirection:'row', alignItems: 'center', justifyContent: 'center'},
     button:{margin:10},
     cadastro:{color:'black',fontSize:15,textDecorationLine: 'none', textAlign:'center', margin:11,}
-
 
 });
