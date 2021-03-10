@@ -43,7 +43,7 @@ export default function LoginScreen (props: LoginScreenProps) {
      <Button style={styles.button}
       title="Entrar"
       buttonStyle={{borderRadius:30}}
-      onPress={() => console.log('test')}/>
+      onPress={() => navigation.log('test')}/>
       </View>
     
     <Text style={styles.cadastro}>Não possui cadastro? {'\n'} Clique aqui para se cadastrar</Text>
@@ -51,7 +51,7 @@ export default function LoginScreen (props: LoginScreenProps) {
    <View style={styles.iconSocial}>
         <SocialIcon
         type='instagram'
-        onPress={() => console.log('test')}/>
+        onPress={() => console.log('uri:')}/>
         
         <SocialIcon
         type='facebook'
@@ -75,7 +75,7 @@ const styles = StyleSheet.create({
         alignItens: 'center',
     },
     logo:{color:'white', fontSize:50,textAlign:'center',},
-    iconSocial:{alignItems: 'center', justifyContent: 'center'},
+    iconSocial:{flexDirection:'row', alignItems: 'center', justifyContent: 'center'},
     button:{margin:10},
     cadastro:{color:'black',fontSize:15,textDecorationLine: 'none', textAlign:'center', margin:11,}
 
