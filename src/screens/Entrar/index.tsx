@@ -4,7 +4,7 @@ import {ImageBackground, StyleSheet, TextInput,Text,TouchableOpacity, View, LogB
 import { Image } from 'react-native-elements/dist/image/Image';
 import { Button, Input, SocialIcon } from 'react-native-elements'
 import Icon from 'react-native-vector-icons/FontAwesome';
-import { InputRound } from './components';
+
 
 
 export interface LoginScreenProps {}
@@ -28,7 +28,6 @@ export default function LoginScreen (props: LoginScreenProps) {
     <Image source={require('./../../assets/logo1.png')}
      style={{flex:1, padding:150,margin:7}}/>
 
-     <InputRound/>
     <View style={styles.container}> 
          <Input placeholder='Digite seu email' 
              leftIcon={
