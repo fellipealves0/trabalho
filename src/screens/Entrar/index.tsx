@@ -4,92 +4,67 @@ import {ImageBackground, StyleSheet, TextInput,Text,TouchableOpacity, View, LogB
 import { Image } from 'react-native-elements/dist/image/Image';
 import { Button, Input, SocialIcon } from 'react-native-elements'
 import Icon from 'react-native-vector-icons/FontAwesome';
-
-
+import {Formik} from 'formik';
 
 export interface LoginScreenProps {}
 
 export default function LoginScreen (props: LoginScreenProps) {
 
-    const [email, setEmail] = React.useState('');
-    const [senha, setSenha] = React.useState('12345');
-
-    const logar = () =>{ 
-      if (email == 'test@test.om.br' && senha == '12345')
+ 
+    const logar = ({email,senha}: any) =>{ 
+      console.log('email',email);
+      console.log('senha',senha);
+      if (email == 'fellipe@fellipe' && senha == '123456')
     console.log('Login aceito');
     else
     console.log('Email e senha incorreto');
+
   }
 
-    return (
-      <ImageBackground source={require('./../../assets/fundo2.jpg')}
-                                   style={{width:'100%',height:'100%'}}>
+  return (<ImageBackground source={require('./../../assets/fundo2.jpg')} style={{width:'100%',height:'100%'}}>
+
+<Formik
+    initialValues={{email:'', senha:''}}
+    onSubmit={logar}
+
+>
+  {({handleChange, handleSubmit}) => (
     <View>
     <Image source={require('./../../assets/logo1.png')}
      style={{flex:1, padding:150,margin:7}}/>
 
     <View style={styles.container}> 
-         <Input placeholder='Digite seu email' 
-             leftIcon={
-             <Icon
-             name='user'
-             size={20}
-             color='black'
-             />}
-             value={email}
-             onChangeText={setEmail}/>
-
-        <Input placeholder='Digite sua senha' 
-             leftIcon={
-             <Icon
-             name='lock'
-             size={20}
-             color='black'
-             /> }
-             secureTextEntry={true}
-             value={senha}
-             onChangeText={setSenha}/>
-
-        </View>
+         <Input placeholder='Digite seu email' leftIcon={<Icon name='user'size={20} color='black'/>} onChangeText={handleChange('email')}/>
+         <Input placeholder='Digite sua senha' leftIcon={<Icon name='lock'size={20} color='black'/> } secureTextEntry={true} onChangeText={handleChange('senha')}/>
+    </View>
 
      <View>
-     <Button style={styles.button}
-      title="Entrar"
-      buttonStyle={{borderRadius:30}}
-      onPress={() => console.log('Cadastrar')}/>
-      </View>
+     <Button style={styles.button} title="Entrar" buttonStyle={{borderRadius:30}} onPress={handleSubmit}/>
+    </View>
     
-    <Text style={styles.cadastro}>Não possui cadastro? {'\n'} Clique aqui para se cadastrar</Text>
+      <Text style={styles.cadastro}>Não possui cadastro? {'\n'} Clique aqui para se cadastrar</Text>
 
    <View style={styles.iconSocial}>
-        <SocialIcon
-        type='instagram'
-        onPress={() => console.log('uri:')}/>
-        
-        <SocialIcon
-        type='facebook'
-        onPress={() => console.log('test')}/>
-
-        <SocialIcon
-        type='google'
-        onPress={() => console.log('test')}/>
-        
-         </View>
-
+      <SocialIcon type='instagram' onLongPress={() => console.log('')}/>
+      <SocialIcon type='facebook' onPress={() => console.log('test')}/>
+      <SocialIcon type='google'onPress={() => console.log('test')}/>
     </View>
+
+
+</View>
+
+)}
+
+</Formik>
       
-  </ImageBackground>
+</ImageBackground>
 );
 }
+
 const styles = StyleSheet.create({
-    container: {
-        flexDirection:'column',
-        justiftyContent:'center',
-        alignItens: 'center',
-    },
-    logo:{color:'white', fontSize:50,textAlign:'center',},
+    container: {flexDirection:'column',justiftyContent:'center',alignItens: 'center'},
+    logo:{color:'white', fontSize:50,textAlign:'center'},
     iconSocial:{flexDirection:'row', alignItems: 'center', justifyContent: 'center'},
     button:{margin:10},
-    cadastro:{color:'black',fontSize:15,textDecorationLine: 'none', textAlign:'center', margin:11,}
-
+    cadastro:{color:'black',fontSize:15,textDecorationLine: 'none', textAlign:'center', margin:11}
 });
