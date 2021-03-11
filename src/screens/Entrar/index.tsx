@@ -7,14 +7,22 @@ import {useNavigation} from '@react-navigation/native';
 import { Button, Input, SocialIcon } from 'react-native-elements'
 import { createStackNavigator } from '@react-navigation/stack';
 import Icon from 'react-native-vector-icons/FontAwesome';
+import { InputRound } from './components';
 
 
 export interface LoginScreenProps {}
 
 export default function LoginScreen (props: LoginScreenProps) {
 
-    const [email, setEmail] = React.useState('test@test.com.br');
+    const [email, setEmail] = React.useState('');
     const [senha, setSenha] = React.useState('12345');
+
+    const logar = () =>{ 
+      if (email == 'test@test.om.br' && senha == '12345')
+    console.log('Login aceito');
+    else
+    console.log('Email e senha incorreto');
+  }
 
     return (
       <ImageBackground source={require('./../../assets/fundo2.jpg')}
@@ -23,6 +31,7 @@ export default function LoginScreen (props: LoginScreenProps) {
     <Image source={require('./../../assets/logo1.png')}
      style={{flex:1, padding:150,margin:7}}/>
 
+     <InputRound/>
     <View style={styles.container}> 
          <Input placeholder='Digite seu email' 
              leftIcon={

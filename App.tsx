@@ -5,16 +5,5 @@ import LoginScreens from './src/screens/Home/index';
 
 
 export default function App() {
-  return (
-    <LoginScreens></LoginScreens>
-  );
+  return (<LoginScreens/>);
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
