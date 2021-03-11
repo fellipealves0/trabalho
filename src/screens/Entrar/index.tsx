@@ -2,10 +2,7 @@ import * as React from 'react';
 import { ActivityIndicator } from 'react-native';
 import {ImageBackground, StyleSheet, TextInput,Text,TouchableOpacity, View, LogBox} from 'react-native';
 import { Image } from 'react-native-elements/dist/image/Image';
-import { NavigationContainer } from '@react-navigation/native';
-import {useNavigation} from '@react-navigation/native';
 import { Button, Input, SocialIcon } from 'react-native-elements'
-import { createStackNavigator } from '@react-navigation/stack';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import { InputRound } from './components';
 
