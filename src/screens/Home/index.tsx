@@ -5,7 +5,8 @@ import { Image } from 'react-native-elements/dist/image/Image';
 import { NavigationContainer } from '@react-navigation/native';
 import {useNavigation} from '@react-navigation/native';
 import { Button, Input, SocialIcon } from 'react-native-elements'
-import {createBottomTabNavigator} from 'react-native-navigation'
+import { createStackNavigator } from '@react-navigation/stack';
+import { createBottomTabNavigator } from 'react-navigation/bottom-tabs';
 
 import Icon from 'react-native-vector-icons/FontAwesome';
 
