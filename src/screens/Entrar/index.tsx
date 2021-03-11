@@ -16,15 +16,6 @@ export default function LoginScreen (props: LoginScreenProps) {
     const [email, setEmail] = React.useState('test@test.com.br');
     const [senha, setSenha] = React.useState('12345');
 
-
-    const SignIn = () => {
-        if (email.trim() !== '' && senha.trim() !== '') 
-            console.log('Logado com sucesso');
-        else {
-            // alerta de email ou senha errado
-            alert('E-mail e/ou senha não correspondem!');
-          }; 
-
     return (
       <ImageBackground source={require('./../../assets/fundo2.jpg')}
                                    style={{width:'100%',height:'100%'}}>
@@ -94,5 +85,6 @@ const styles = StyleSheet.create({
     logo:{color:'white', fontSize:50,textAlign:'center',},
     iconSocial:{flexDirection:'row', alignItems: 'center', justifyContent: 'center'},
     button:{margin:10},
-    cadastro:{color:'black',fontSize:15,textDecorationLine: 'none', textAlign:'center', margin:11,},
+    cadastro:{color:'black',fontSize:15,textDecorationLine: 'none', textAlign:'center', margin:11,}
+
 });
