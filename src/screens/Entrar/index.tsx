@@ -9,12 +9,14 @@ import { useNavigation } from '@react-navigation/core';
 
 
 
+
 export interface LoginScreenProps {}
 
 export default function LoginScreen (props: LoginScreenProps) {
  
     const nav = useNavigation()
     const [erro , setErro] = React.useState ('')
+   
 
     const logar = ({email,senha}: any) =>{ 
       setErro('')

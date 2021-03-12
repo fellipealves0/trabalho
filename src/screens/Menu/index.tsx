@@ -16,15 +16,24 @@ export interface HomeScreenProps {
 export function HomeScreen (props: HomeScreenProps) {
 
   const nav = useNavigation()
-    return (
-      <View>
-         <Text>HomeScreen</Text>
-         <View>
-         <Button style={styles.button} title="Voltar" buttonStyle={{borderRadius:30}} onPress={() => {nav.navigate('Entrar')}}/>
-    </View>
-      </View>
-    );
+  
+    return (<ImageBackground source={require('./../../assets/fundo2.jpg')} style={{width:'100%',height:'100%'}}>
+
+
+
+
+
+
+
+
+
+
+
+</ImageBackground>
+      
+);
 }
+
 
 
 const styles = StyleSheet.create({
