@@ -5,16 +5,33 @@ import {createStackNavigator} from '@react-navigation/stack'
 import LoginScreen from '../Entrar';
 import SignupScreen from '../Cadastrar';
 import { HomeScreen } from '../Menu';
-import { SettingScreen } from '../Configuração';
+import Ionicons from 'react-native-vector-icons/Ionicons';
+import SettingScreen from '../Configuração';
 
 
 const Tab = createBottomTabNavigator();
 
 export function MyTabs() {
   return (
-    <Tab.Navigator>
-      <Tab.Screen name="Menu" component={HomeScreen} />
-      <Tab.Screen name="Settings" component={SettingScreen} />
+    <Tab.Navigator
+    screenOptions={({ route }) => ({
+        tabBarIcon: ({ focused, color, size }) => {
+          let iconName;
+          if (route.name === 'Menu') {
+            iconName = focused ? 'home' : 'home';
+          } else if (route.name === 'Configuração') {
+            iconName = focused ? 'list' : 'list';
+          }
+          return <Ionicons name={iconName} size={30} color={color} />;
+        },
+      })}
+      tabBarOptions={{
+        activeTintColor: 'tomato',
+        inactiveTintColor: 'gray',
+      }}
+    >
+      <Tab.Screen name="Menu" component={HomeScreen}/>
+      <Tab.Screen name="Configuração" component={SettingScreen} />
     </Tab.Navigator>
   );
 }
