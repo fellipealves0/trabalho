@@ -1,6 +1,6 @@
 import * as React from 'react';
-import { ActivityIndicator } from 'react-native';
-import {ImageBackground, StyleSheet, TextInput,Text,TouchableOpacity, View, LogBox} from 'react-native';
+import { ActivityIndicator, Linking } from 'react-native';
+import {ImageBackground, StyleSheet, TextInput,Text,View, LogBox} from 'react-native';
 import { Image } from 'react-native-elements/dist/image/Image';
 import { Button, Input, SocialIcon } from 'react-native-elements'
 import Icon from 'react-native-vector-icons/FontAwesome';
@@ -45,9 +45,9 @@ export default function LoginScreen (props: LoginScreenProps) {
       <Text style={styles.cadastro}>Não possui cadastro? {'\n'} Clique aqui para se cadastrar</Text>
 
    <View style={styles.iconSocial}>
-      <SocialIcon type='instagram' onLongPress={() => console.log('')}/>
-      <SocialIcon type='facebook' onPress={() => console.log('test')}/>
-      <SocialIcon type='google'onPress={() => console.log('test')}/>
+      <SocialIcon type='instagram' onPress={async() => Linking.openURL('http://instagram.com')}/>
+      <SocialIcon type='facebook' onPress={async() => Linking.openURL('https://pt-br.facebook.com/')}/>
+      <SocialIcon type='google'onPress={async() => Linking.openURL('http://gmail.com')}/>
     </View>
 
 
