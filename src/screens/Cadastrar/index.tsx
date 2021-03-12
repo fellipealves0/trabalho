@@ -1,79 +1,72 @@
 import * as React from 'react';
-import { ActivityIndicator } from 'react-native';
-import {ImageBackground, StyleSheet, TextInput,Text,TouchableOpacity, View, LogBox} from 'react-native';
+import { ActivityIndicator, Linking } from 'react-native';
+import {ImageBackground, StyleSheet, TextInput,Text,View, LogBox} from 'react-native';
 import { Image } from 'react-native-elements/dist/image/Image';
 import { Button, Input, SocialIcon } from 'react-native-elements'
 import Icon from 'react-native-vector-icons/FontAwesome';
+import {Formik} from 'formik';
+import { useNavigation } from '@react-navigation/core';
 
 export interface SignupScreenProps {}
 
-export default function SignupScreen (props: SignupScreenProps)
-{
-    return (
-      <ImageBackground source={require('./../../assets/fundo2.jpg')}
-                                   style={{width:'100%',height:'100%'}}>
-    <View>
-    <Image source={require('./../../assets/logo1.png')}
-     style={{flex:1, padding:150,margin:7}}/>
+export default function SignupScreen (props: SignupScreenProps) {
+  
+  const nav = useNavigation()
+ 
+  const cadastrar = ({nome, email,senha}: any) =>{ 
+    console.log('nome',nome);
+    console.log('email',email);
+    console.log('senha',senha);
+    if (nome== 'Fellipe' && email == 'fellipe@fellipe' && senha == '123456')
+  console.log('Cadastro realizado com sucesso');
+  else
+  console.log('Email já cadastrado');
 
-    <View style={styles.container}> 
-         <Input placeholder='Digite seu email' 
-             leftIcon={
-             <Icon
-             name='user'
-             size={20}
-             color='black'
-             /> }/>
+}
 
-        <Input placeholder='Digite sua senha' 
-             leftIcon={
-             <Icon
-             name='lock'
-             size={20}
-             color='black'
-             /> }
-             secureTextEntry={true}/>
+return (<ImageBackground source={require('./../../assets/fundo2.jpg')} style={{width:'100%',height:'100%'}}>
 
-        </View>
+<Formik
+  initialValues={{nome:'', email:'', senha:''}}
+  onSubmit={cadastrar}
 
-     <View>
-     <Button style={styles.button}
-      title="Entrar"
-      buttonStyle={{borderRadius:30}}
-      onPress={() => console.log('test')}/>
-      </View>
+>
+{({handleChange, handleSubmit}) => (
+  <View>
+  <Image source={require('./../../assets/logo1.png')}
+   style={{flex:1, padding:150,margin:7}}/>
+
+  <View style={styles.container}> 
+       <Input placeholder='Digite seu nome' leftIcon={<Icon name='user-plus'size={20} color='black'/>} onChangeText={handleChange('nome')}/>
+       <Input placeholder='Digite seu email' leftIcon={<Icon name='user'size={20} color='black'/>} onChangeText={handleChange('email')}/>
+       <Input placeholder='Digite sua senha' leftIcon={<Icon name='lock'size={20} color='black'/> } secureTextEntry={true} onChangeText={handleChange('senha')}/>
+  </View>
+
+   <View>
+   <Button style={styles.button} title="Cadastrar" buttonStyle={{borderRadius:30}} onPress={() => {nav.navigate('Menu')}}/>
+  </View>
+  
+
+ <View style={styles.iconSocial}>
+    <SocialIcon type='instagram' onPress={async() => Linking.openURL('http://instagram.com')}/>
+    <SocialIcon type='facebook' onPress={async() => Linking.openURL('https://pt-br.facebook.com/')}/>
+    <SocialIcon type='google'onPress={async() => Linking.openURL('http://gmail.com')}/>
+  </View>
+
+
+</View>
+
+)}
+
+</Formik>
     
-    <Text style={styles.cadastro}>Não possui cadastro? {'\n'} Clique aqui para se cadastrar</Text>
-
-   <View style={styles.iconSocial}>
-        <SocialIcon
-        type='instagram'
-        onPress={() => console.log('uri:')}/>
-        
-        <SocialIcon
-        type='facebook'
-        onPress={() => console.log('test')}/>
-
-        <SocialIcon
-        type='google'
-        onPress={() => console.log('test')}/>
-        
-         </View>
-
-    </View>
-      
-  </ImageBackground>
+</ImageBackground>
 );
 }
-const styles = StyleSheet.create({
-    container: {
-        flexDirection:'column',
-        justiftyContent:'center',
-        alignItens: 'center',
-    },
-    logo:{color:'white', fontSize:50,textAlign:'center',},
-    iconSocial:{flexDirection:'row', alignItems: 'center', justifyContent: 'center'},
-    button:{margin:10},
-    cadastro:{color:'black',fontSize:15,textDecorationLine: 'none', textAlign:'center', margin:11,}
 
+const styles = StyleSheet.create({
+  container: {flexDirection:'column',justiftyContent:'center',alignItens: 'center'},
+  logo:{color:'white', fontSize:50,textAlign:'center'},
+  iconSocial:{flexDirection:'row', alignItems: 'center', justifyContent: 'center'},
+  button:{margin:10},
 });

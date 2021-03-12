@@ -1,24 +1,29 @@
 import * as React from 'react';
-import { ActivityIndicator, Linking } from 'react-native';
+import { ActivityIndicator, Linking, TouchableOpacity } from 'react-native';
 import {ImageBackground, StyleSheet, TextInput,Text,View, LogBox} from 'react-native';
 import { Image } from 'react-native-elements/dist/image/Image';
 import { Button, Input, SocialIcon } from 'react-native-elements'
 import Icon from 'react-native-vector-icons/FontAwesome';
 import {Formik} from 'formik';
+import { useNavigation } from '@react-navigation/core';
+
+
 
 export interface LoginScreenProps {}
 
 export default function LoginScreen (props: LoginScreenProps) {
-
  
+    const nav = useNavigation()
+    const [erro , setErro] = React.useState ('')
+
     const logar = ({email,senha}: any) =>{ 
+      setErro('')
       console.log('email',email);
       console.log('senha',senha);
       if (email == 'fellipe@fellipe' && senha == '123456')
-    console.log('Login aceito');
+            nav.navigate('Menu')
     else
-    console.log('Email e senha incorreto');
-
+    setErro ('Email e senha incorreto');
   }
 
   return (<ImageBackground source={require('./../../assets/fundo2.jpg')} style={{width:'100%',height:'100%'}}>
@@ -39,11 +44,15 @@ export default function LoginScreen (props: LoginScreenProps) {
     </View>
 
      <View>
-     <Button style={styles.button} title="Entrar" buttonStyle={{borderRadius:30}} onPress={handleSubmit}/>
+     <Button style={styles.button} title="Entrar" buttonStyle={{borderRadius:30}} onPress={() => {nav.navigate('Menu')}}/>
     </View>
-    
-      <Text style={styles.cadastro}>Não possui cadastro? {'\n'} Clique aqui para se cadastrar</Text>
 
+    <TouchableOpacity onPress={() => {nav.navigate('Cadastrar')}}>
+    <Text style={styles.cadastro}>Não possui cadastro? {'\n'} Clique aqui para se cadastrar</Text>
+    </TouchableOpacity>
+    
+    
+      
    <View style={styles.iconSocial}>
       <SocialIcon type='instagram' onPress={async() => Linking.openURL('http://instagram.com')}/>
       <SocialIcon type='facebook' onPress={async() => Linking.openURL('https://pt-br.facebook.com/')}/>
