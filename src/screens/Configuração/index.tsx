@@ -34,7 +34,7 @@ const styles = StyleSheet.create({
   container: {flexDirection:'column',justifyContent:'center',alignItems: 'center'},
   logo:{color:'white', fontSize:50,textAlign:'center'},
   iconSocial:{flexDirection:'row', alignItems: 'center', justifyContent: 'center'},
-  button:{margin:15},
+  button:{margin:45},
   cadastro:{color:'black',fontSize:15,textDecorationLine: 'none', textAlign:'center', margin:11}
 });
 
