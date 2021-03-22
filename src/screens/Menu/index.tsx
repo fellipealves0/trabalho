@@ -19,16 +19,6 @@ export function HomeScreen (props: HomeScreenProps) {
   
     return (<ImageBackground source={require('./../../assets/fundo2.jpg')} style={{width:'100%',height:'100%'}}>
 
-
-
-
-
-
-
-
-
-
-
 </ImageBackground>
       
 );

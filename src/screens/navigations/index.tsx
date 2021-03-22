@@ -49,7 +49,7 @@ export const MainNavigation = () => (
         <Stack.Navigator screenOptions={{headerShown:false}}>
            <Stack.Screen name= "Entrar" component={LoginScreen} />
            <Stack.Screen name= "Cadastrar" component={SignupScreen} />
-           <Stack.Screen name= "Menu" component={MyTabs} options ={{cardStyleInterpolator: CardStyleInterpolators.forModalPresentationIOS}} />
+           <Stack.Screen name= "Menu" component={MyTabs} />
         </Stack.Navigator>
     </NavigationContainer>
 )
