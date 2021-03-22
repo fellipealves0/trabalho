@@ -5,7 +5,9 @@ import { Image } from 'react-native-elements/dist/image/Image';
 import { Button, Input, SocialIcon } from 'react-native-elements'
 import Icon from 'react-native-vector-icons/FontAwesome';
 import {Formik} from 'formik';
+import * as Yup from 'yup'
 import { useNavigation } from '@react-navigation/core';
+
 
 export interface SignupScreenProps {}
 
@@ -28,6 +30,11 @@ return (<ImageBackground source={require('./../../assets/fundo2.jpg')} style={{w
 
 <Formik
   initialValues={{nome:'', email:'', senha:''}}
+  validationSchema={Yup.object().shape({
+    nome:Yup.string().required('Nome obrigatorio'),
+    email:Yup.string().email ('Precisa ser um Email').required('Email obrigatorio'),
+    senha:Yup.string().min (6,'Pelo menos 6 caracteres').required('Senha obrigatorio'),
+  })}
   onSubmit={cadastrar}
 
 >

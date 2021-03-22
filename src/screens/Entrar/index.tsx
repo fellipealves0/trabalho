@@ -6,6 +6,7 @@ import { Button, Input, SocialIcon } from 'react-native-elements'
 import Icon from 'react-native-vector-icons/FontAwesome';
 import {Formik} from 'formik';
 import { useNavigation } from '@react-navigation/core';
+import * as Yup from 'yup'
 
 
 
@@ -32,6 +33,10 @@ export default function LoginScreen (props: LoginScreenProps) {
 
 <Formik
     initialValues={{email:'', senha:''}}
+    validationSchema={Yup.object().shape({
+      email:Yup.string().email ('Precisa ser um Email').required('Email obrigatorio'),
+      senha:Yup.string().min (6,'Pelo menos 6 caracteres').required('Senha obrigatorio'),
+    })}
     onSubmit={logar}
 
 >
