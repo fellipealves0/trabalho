@@ -27,7 +27,7 @@ export function HomeScreen (props: HomeScreenProps) {
 
 
 const styles = StyleSheet.create({
-  container: {flexDirection:'column',justiftyContent:'center',alignItens: 'center'},
+  container: {flexDirection:'column',justifyContent:'center',alignItems: 'center'},
   logo:{color:'white', fontSize:50,textAlign:'center'},
   iconSocial:{flexDirection:'row', alignItems: 'center', justifyContent: 'center'},
   button:{margin:10},
