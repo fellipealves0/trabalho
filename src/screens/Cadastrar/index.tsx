@@ -20,7 +20,7 @@ export default function SignupScreen (props: SignupScreenProps) {
     console.log('nome',nome);
     console.log('email',email);
     console.log('senha',senha);
-    if (nome== 'Fellipe' && email == 'fellipe@fellipe' && senha == '123456')
+    if (nome== 'Fellipe' && email == 'fellipe@gmail.com' && senha == '123456')
   console.log('Cadastro realizado com sucesso');
   else
   console.log('Email já cadastrado');
@@ -42,7 +42,7 @@ return (<ImageBackground source={require('./../../assets/fundo2.jpg')} style={{w
 {({handleChange, handleSubmit}) => (
   <View>
   <Image source={require('./../../assets/logo1.png')}
-   style={{flex:1, padding:150,margin:7}}/>
+   style={{flex:1, padding:130,margin:7}}/>
 
   <View style={styles.container}> 
        <Input placeholder='Digite seu nome' leftIcon={<Icon name='user-plus'size={20} color='black'/>} onChangeText={handleChange('nome')}/>

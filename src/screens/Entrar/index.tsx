@@ -1,4 +1,4 @@
-// @ts-nocheck
+
 import * as React from 'react';
 import { ActivityIndicator, Linking, TouchableOpacity } from 'react-native';
 import {ImageBackground, StyleSheet, TextInput,Text,View, LogBox} from 'react-native';
@@ -24,7 +24,7 @@ export default function LoginScreen (props: LoginScreenProps) {
       setErro('')
       console.log('email',email);
       console.log('senha',senha);
-      if (email == 'fellipe@fellipe' && senha == '123456')
+      if (email == 'fellipe@gmail.com' && senha == '123456')
             nav.navigate('Menu')
     else
     setErro ('Email e senha incorreto');
@@ -38,9 +38,7 @@ export default function LoginScreen (props: LoginScreenProps) {
       email:Yup.string().email ('Precisa ser um Email').required('Email obrigatorio'),
       senha:Yup.string().min (6,'Pelo menos 6 caracteres').required('Senha obrigatorio'),
     })}
-    onSubmit={logar}
-
->
+    onSubmit={logar}> 
   {({handleChange, handleSubmit}) => (
     <View>
     <Image source={require('./../../assets/logo1.png')}
@@ -52,14 +50,12 @@ export default function LoginScreen (props: LoginScreenProps) {
     </View>
 
      <View>
-     <Button style={styles.button} title="Entrar" buttonStyle={{borderRadius:30}} onPress={() => {nav.navigate('Menu')}}/>
+     <Button style={styles.button} title="Entrar" buttonStyle={{borderRadius:30}}  onPress={() =>handleSubmit()}/>
     </View>
 
     <TouchableOpacity onPress={() => {nav.navigate('Cadastrar')}}>
     <Text style={styles.cadastro}>Não possui cadastro? {'\n'} Clique aqui para se cadastrar</Text>
     </TouchableOpacity>
-    
-    
       
    <View style={styles.iconSocial}>
       <SocialIcon type='instagram' onPress={async() => Linking.openURL('http://instagram.com')}/>
@@ -69,7 +65,6 @@ export default function LoginScreen (props: LoginScreenProps) {
 
 
 </View>
-
 )}
 
 </Formik>
