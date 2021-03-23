@@ -24,7 +24,7 @@ export default function LoginScreen (props: LoginScreenProps) {
       console.log('Email',email);
       console.log('Senha',senha);
       if (email == 'fellipe@gmail.com' && senha == '123456')
-            console.log('Logado com sucesso')
+            nav.navigate('Menu')
     else
     console.log ('Email e senha incorreto');
   }
@@ -44,14 +44,14 @@ export default function LoginScreen (props: LoginScreenProps) {
 
     <View>
     <Image source={require('./../../assets/logo1.png')}
-     style={{flex:1, padding:150,margin:7}}/>
+     style={{flex:1, padding:130,margin:7}}/>
 
     <View style={styles.container}> 
            <Input placeholder='Digite seu email' leftIcon={<Icon name='user'size={20} color='black'/>} onChangeText={handleChange('email')}/>
-           <Text>{errors.email}</Text>
+           <Text style={styles.erro}>{errors.email}</Text>
 
            <Input placeholder='Digite sua senha' leftIcon={<Icon name='lock'size={20} color='black'/> } secureTextEntry={true} onChangeText={handleChange('senha')}/>
-           <Text>{errors.senha}</Text>
+           <Text style={styles.erro}>{errors.senha}</Text>
     </View>
 
     <Button style={styles.button} title="Entrar" buttonStyle={{borderRadius:30}}  onPress={() =>handleSubmit()}/>
@@ -77,7 +77,8 @@ export default function LoginScreen (props: LoginScreenProps) {
 
 const styles = StyleSheet.create({
     container: {flexDirection:'column',justifyContent:'center',alignItems: 'center'},
-    logo:{color:'white', fontSize:50,textAlign:'center'},
+    erro:{textAlign:'left', marginLeft:190},
+    logo:{color:'white', fontSize:50, textAlign:'center'},
     iconSocial:{flexDirection:'row', alignItems: 'center', justifyContent: 'center'},
     button:{margin:10},
     cadastro:{color:'black',fontSize:15,textDecorationLine: 'none', textAlign:'center', margin:11}
