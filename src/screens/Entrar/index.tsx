@@ -20,14 +20,13 @@ export default function LoginScreen (props: LoginScreenProps) {
     const [erro , setErro] = React.useState ('')
    
 
-    const logar = ({email,senha}: any) =>{ 
-      setErro('')
-      console.log('email',email);
-      console.log('senha',senha);
+    const logar = async ({email,senha}: any) =>{ 
+      console.log('Email',email);
+      console.log('Senha',senha);
       if (email == 'fellipe@gmail.com' && senha == '123456')
-            nav.navigate('Menu')
+            console.log('Logado com sucesso')
     else
-    setErro ('Email e senha incorreto');
+    console.log ('Email e senha incorreto');
   }
 
   return (<ImageBackground source={require('./../../assets/fundo2.jpg')} style={{width:'100%',height:'100%'}}>
@@ -35,26 +34,30 @@ export default function LoginScreen (props: LoginScreenProps) {
 <Formik
     initialValues={{email:'', senha:''}}
     validationSchema={Yup.object().shape({
-      email:Yup.string().email ('Precisa ser um Email').required('Email obrigatorio'),
-      senha:Yup.string().min (6,'Pelo menos 6 caracteres').required('Senha obrigatorio'),
+      email:Yup.string().required('Email obrigatorio').email ('Precisa ser um Email'),
+      senha:Yup.string().required('Senha obrigatorio').min (6,'Pelo menos 6 caracteres'),
     })}
+
     onSubmit={logar}> 
-  {({handleChange, handleSubmit}) => (
+
+  {({handleChange, errors, handleSubmit}) => (
+
     <View>
     <Image source={require('./../../assets/logo1.png')}
      style={{flex:1, padding:150,margin:7}}/>
 
     <View style={styles.container}> 
-         <Input placeholder='Digite seu email' leftIcon={<Icon name='user'size={20} color='black'/>} onChangeText={handleChange('email')}/>
-         <Input placeholder='Digite sua senha' leftIcon={<Icon name='lock'size={20} color='black'/> } secureTextEntry={true} onChangeText={handleChange('senha')}/>
+           <Input placeholder='Digite seu email' leftIcon={<Icon name='user'size={20} color='black'/>} onChangeText={handleChange('email')}/>
+           <Text>{errors.email}</Text>
+
+           <Input placeholder='Digite sua senha' leftIcon={<Icon name='lock'size={20} color='black'/> } secureTextEntry={true} onChangeText={handleChange('senha')}/>
+           <Text>{errors.senha}</Text>
     </View>
 
-     <View>
-     <Button style={styles.button} title="Entrar" buttonStyle={{borderRadius:30}}  onPress={() =>handleSubmit()}/>
-    </View>
+    <Button style={styles.button} title="Entrar" buttonStyle={{borderRadius:30}}  onPress={() =>handleSubmit()}/>
 
     <TouchableOpacity onPress={() => {nav.navigate('Cadastrar')}}>
-    <Text style={styles.cadastro}>Não possui cadastro? {'\n'} Clique aqui para se cadastrar</Text>
+           <Text style={styles.cadastro}>Não possui cadastro? {'\n'} Clique aqui para se cadastrar</Text>
     </TouchableOpacity>
       
    <View style={styles.iconSocial}>
@@ -62,7 +65,6 @@ export default function LoginScreen (props: LoginScreenProps) {
       <SocialIcon type='facebook' onPress={async() => Linking.openURL('https://pt-br.facebook.com/')}/>
       <SocialIcon type='google'onPress={async() => Linking.openURL('http://gmail.com')}/>
     </View>
-
 
 </View>
 )}
