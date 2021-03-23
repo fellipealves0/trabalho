@@ -1,4 +1,4 @@
-
+// @ts-nocheck
 import * as React from 'react';
 import { ActivityIndicator, Linking, TouchableOpacity } from 'react-native';
 import {ImageBackground, StyleSheet, TextInput,Text,View, LogBox} from 'react-native';
