@@ -19,10 +19,16 @@ export function HomeScreen (props: HomeScreenProps) {
   
     return (<ImageBackground source={require('./../../assets/fundo2.jpg')} style={{width:'100%',height:'100%'}}>
 
-</ImageBackground>
-      
+<View>
+
+<Image source={require('./../../assets/logo1.png')}
+style={{flex:1, padding:130,margin:7}}/>
+</View>
+
+ </ImageBackground>
 );
 }
+
 
 
 
