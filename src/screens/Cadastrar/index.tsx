@@ -56,12 +56,9 @@ return (<ImageBackground source={require('./../../assets/fundo2.jpg')} style={{w
        <Input placeholder='Digite sua senha' leftIcon={<Icon name='lock'size={20} color='black'/> } secureTextEntry={true} onChangeText={handleChange('senha')}/>
        <Text style={styles.erro}>{errors.senha}</Text>
   </View>
-
-   <View>
+   
    <Button style={styles.button} title="Cadastrar" buttonStyle={{borderRadius:30}} onPress={() =>handleSubmit()}/>
-  </View>
   
-
  <View style={styles.iconSocial}>
     <SocialIcon type='instagram' onPress={async() => Linking.openURL('http://instagram.com')}/>
     <SocialIcon type='facebook' onPress={async() => Linking.openURL('https://pt-br.facebook.com/')}/>
