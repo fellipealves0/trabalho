@@ -76,10 +76,10 @@ export default function LoginScreen (props: LoginScreenProps) {
 }
 
 const styles = StyleSheet.create({
-    container: {flexDirection:'column',justifyContent:'center',alignItems: 'center'},
+    container: {flexDirection:'column',justifyContent:'center',alignItems: 'center',margin:8},
     erro:{textAlign:'left', marginLeft:190},
     logo:{color:'white', fontSize:50, textAlign:'center'},
-    iconSocial:{flexDirection:'row', alignItems: 'center', justifyContent: 'center'},
-    button:{margin:10},
-    cadastro:{color:'black',fontSize:15,textDecorationLine: 'none', textAlign:'center', margin:11}
+    iconSocial:{flexDirection:'row', alignItems: 'center', justifyContent: 'center', margin:100},
+    button:{margin:20},
+    cadastro:{color:'black',fontSize:18,textDecorationLine: 'none', textAlign:'center', margin:50}
 });
