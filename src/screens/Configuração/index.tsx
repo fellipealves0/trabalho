@@ -32,10 +32,8 @@ export default function SettingScreen (props: SettingScreenProps) {
 
 
 const styles = StyleSheet.create({
-  container: {flexDirection:'column',justifyContent:'center',alignItems: 'center'},
-  logo:{color:'white', fontSize:50,textAlign:'center'},
-  iconSocial:{flexDirection:'row', alignItems: 'center', justifyContent: 'center'},
+  container:{color:'black',fontSize:18,textDecorationLine: 'none', textAlign:'center', margin:30},
   button:{margin:10},
-  cadastro:{color:'black',fontSize:15,textDecorationLine: 'none', textAlign:'center', margin:11}
+  
 });
 

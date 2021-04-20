@@ -22,9 +22,17 @@ export function HomeScreen (props: HomeScreenProps) {
 
 <View>
 
-<Toolbar/>
 <Image source={require('./../../assets/logo1.png')}
-style={{flex:1, padding:130,margin:7}}/>
+style={{padding:130,margin:7}}/>
+
+
+      <Text style={styles.container}> Categoria </Text>
+      <Image style={styles.image} source={require('./../../assets/foto1.jpg' )} PlaceholderContent={<ActivityIndicator />}/>
+
+      <Text style={styles.container}> Mais Visto </Text>
+
+      <Text style={styles.container}> Lançamento </Text>
+
 </View>
 
  </ImageBackground>
@@ -35,11 +43,9 @@ style={{flex:1, padding:130,margin:7}}/>
 
 
 const styles = StyleSheet.create({
-  container: {flexDirection:'column',justifyContent:'center',alignItems: 'center'},
-  logo:{color:'white', fontSize:50,textAlign:'center'},
-  iconSocial:{flexDirection:'row', alignItems: 'center', justifyContent: 'center'},
+  container:{color:'black',fontSize:18,textDecorationLine: 'none', textAlign:'left', margin:30},
   button:{margin:10},
-  cadastro:{color:'black',fontSize:15,textDecorationLine: 'none', textAlign:'center', margin:11}
+  image:{width: 200, height: 200 }
 });
 
 

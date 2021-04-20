@@ -79,7 +79,6 @@ return (<ImageBackground source={require('./../../assets/fundo2.jpg')} style={{w
 const styles = StyleSheet.create({
   container: {flexDirection:'column',justifyContent:'center',alignItems: 'center',margin:8},
   erro:{textAlign:'left', marginLeft:190},
-  logo:{color:'white', fontSize:50,textAlign:'center'},
-  iconSocial:{flexDirection:'row', alignItems: 'center', justifyContent: 'center',margin:160},
+  iconSocial:{flexDirection:'row', alignItems: 'center', justifyContent: 'center',margin:130},
   button:{margin:20},
 });
