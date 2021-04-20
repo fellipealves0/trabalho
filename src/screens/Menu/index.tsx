@@ -8,6 +8,7 @@ import { Button, Input, SocialIcon } from 'react-native-elements'
 import Icon from 'react-native-vector-icons/FontAwesome';
 import {Formik} from 'formik';
 import { useNavigation } from '@react-navigation/core';
+import { Toolbar } from '../../components/toolbar';
 
 
 export interface HomeScreenProps {
@@ -21,6 +22,7 @@ export function HomeScreen (props: HomeScreenProps) {
 
 <View>
 
+<Toolbar/>
 <Image source={require('./../../assets/logo1.png')}
 style={{flex:1, padding:130,margin:7}}/>
 </View>
