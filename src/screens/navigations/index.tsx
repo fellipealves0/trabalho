@@ -22,12 +22,16 @@ export function MyTabs() {
           if (route.name === 'Menu') {
             iconName = focused ? 'home' : 'home';
 
-          } else if (route.name === 'Buscar') {
-            iconName = focused ? 'search' : 'search';
+          } else if (route.name === 'Categoria') {
+            iconName = focused ? 'apps' : 'apps';
 
-          }else if (route.name === 'Configuração') {
-            iconName = focused ? 'settings' : 'settings';
+          }else if (route.name === 'Notificações') {
+            iconName = focused ? 'notifications' : 'notifications';
+        
+          }else if (route.name === 'Eu') {
+            iconName = focused ? 'person' : 'person';
           }
+          
           return <Ionicons name={iconName} size={30} color={color} />;
         },
       })}
@@ -37,8 +41,9 @@ export function MyTabs() {
       }}
     >
       <Tab.Screen name="Menu" component={HomeScreen}/>
-      <Tab.Screen name="Buscar" component={BuscarScreen}/>
-      <Tab.Screen name="Configuração" component={SettingScreen}/>
+      <Tab.Screen name="Categoria" component={BuscarScreen}/>
+      <Tab.Screen name="Notificações" component={BuscarScreen}/>
+      <Tab.Screen name="Eu" component={SettingScreen}/>
       
     </Tab.Navigator>
   );

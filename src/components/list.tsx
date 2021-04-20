@@ -14,6 +14,10 @@ export function List (props: ListProps) {
           icon: 'user'
         },
         {
+            title: 'Meus Favoritos',
+            icon: 'heart'
+          },
+        {
           title: 'Endereços de Entrega',
           icon: 'envelope'
         },
@@ -24,6 +28,18 @@ export function List (props: ListProps) {
           {
             title: 'Idioma',
             icon: 'language'
+          },
+          {
+            title: 'Configurações de Notificações',
+            icon: 'bell'
+          },
+          {
+            title: 'Histórico',
+            icon: 'file-text'
+          },
+          {
+            title: 'Sugestões',
+            icon: 'lightbulb-o'
           },
           {
             title: 'Versão',
@@ -45,7 +61,3 @@ return (
       </View>
     );
 }
-
-<View>
- 
-</View>

@@ -16,18 +16,16 @@ export default function SettingScreen (props: SettingScreenProps) {
 
 
   return (
-      <ImageBackground source={require('./../../assets/fundo2.jpg')} style={{width:'100%',height:'100%'}}>
+      <ImageBackground source={require('./../../assets/fundo3.jpg')} style={{width:'100%',height:'100%'}}>
 
      <View>
 
      <Image source={require('./../../assets/logo1.png')}
-   style={{flex:1, padding:130,margin:7}}/>
-   
+      style={{flex:1, padding:130,margin:7}}/>
 
-<List/>
 
-   
-
+    <List/>
+    
      <Button style={styles.button} title="Sair" buttonStyle={{borderRadius:30}} onPress={() => {nav.navigate('Entrar')}}/>
      
     </View>
@@ -39,7 +37,7 @@ export default function SettingScreen (props: SettingScreenProps) {
 
 const styles = StyleSheet.create({
   container:{color:'black',fontSize:18,textDecorationLine: 'none', textAlign:'center', margin:30},
-  button:{margin:10},
+  button:{paddingTop: 20, margin:20}
   
 });
 
