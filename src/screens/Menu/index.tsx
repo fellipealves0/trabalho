@@ -27,12 +27,13 @@ style={{padding:130,margin:7}}/>
 
 
       <Text style={styles.container}> Categoria </Text>
-      <Image style={styles.image} source={require('./../../assets/foto1.jpg' )} PlaceholderContent={<ActivityIndicator />}/>
-
+          <Image style={styles.image} source={require('./../../assets/foto1.jpg' )} PlaceholderContent={<ActivityIndicator />}/>
+      
       <Text style={styles.container}> Mais Visto </Text>
+           <Image style={styles.image} source={require('./../../assets/foto2.jpg' )} PlaceholderContent={<ActivityIndicator />}/>
 
       <Text style={styles.container}> Lançamento </Text>
-
+            <Image style={styles.image} source={require('./../../assets/foto2.jpg' )} PlaceholderContent={<ActivityIndicator />}/>
 </View>
 
  </ImageBackground>
@@ -45,7 +46,7 @@ style={{padding:130,margin:7}}/>
 const styles = StyleSheet.create({
   container:{color:'black',fontSize:18,textDecorationLine: 'none', textAlign:'left', margin:30},
   button:{margin:10},
-  image:{width: 200, height: 200 }
+  image:{margin: 5, width: 150, height: 150 }
 });
 
 
