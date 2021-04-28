@@ -43,7 +43,7 @@ export function MyTabs() {
       <Tab.Screen name="Menu" component={HomeScreen}/>
       <Tab.Screen name="Categoria" component={BuscarScreen}/>
       <Tab.Screen name="Notificações" component={BuscarScreen}/>
-      <Tab.Screen name="Eu" component={SettingScreen}/>
+      <Tab.Screen name="Eu" component={EuScreen}/>
       
     </Tab.Navigator>
   );
