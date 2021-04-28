@@ -6,8 +6,8 @@ export default () => {
   const [value, setValue] = React.useState("");
   return (
     <SearchBar
-      platform="android"
-      containerStyle={{}}
+      platform="ios"
+      containerStyle={{paddingTop:10, marginTop:60}}
       inputContainerStyle={{}}
       inputStyle={{}}
       leftIconContainerStyle={{}}
