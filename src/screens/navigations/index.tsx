@@ -1,4 +1,4 @@
-// @ts-nocheck
+
 import * as React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import {NavigationContainer} from '@react-navigation/native'
@@ -8,8 +8,8 @@ import SignupScreen from '../Cadastrar';
 import { HomeScreen } from '../Menu';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import EuScreen from '../Eu';
-import CategoriarScreen from '../Categoria';
-import NotificacoesScreen from '../Notificacoes'
+import { CategoriarScreen } from '../Categoria';
+import { NotificacoesScreen } from '../Notificacoes'
 
 const Tab = createBottomTabNavigator();
 
