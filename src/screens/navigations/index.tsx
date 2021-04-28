@@ -8,8 +8,8 @@ import SignupScreen from '../Cadastrar';
 import { HomeScreen } from '../Menu';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import EuScreen from '../Eu';
-import BuscarScreen from '../Buscar';
-
+import CategoriarScreen from '../Categoria';
+import NotificacoesScreen from '../Notificacoes'
 
 const Tab = createBottomTabNavigator();
 
@@ -41,8 +41,8 @@ export function MyTabs() {
       }}
     >
       <Tab.Screen name="Menu" component={HomeScreen}/>
-      <Tab.Screen name="Categoria" component={BuscarScreen}/>
-      <Tab.Screen name="Notificações" component={BuscarScreen}/>
+      <Tab.Screen name="Categoria" component={CategoriarScreen}/>
+      <Tab.Screen name="Notificações" component={NotificacoesScreen}/>
       <Tab.Screen name="Eu" component={EuScreen}/>
       
     </Tab.Navigator>
