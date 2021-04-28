@@ -7,7 +7,7 @@ import LoginScreen from '../Entrar';
 import SignupScreen from '../Cadastrar';
 import { HomeScreen } from '../Menu';
 import Ionicons from 'react-native-vector-icons/Ionicons';
-import SettingScreen from '../Eu';
+import EuScreen from '../Eu';
 import BuscarScreen from '../Buscar';
 
 

@@ -22,7 +22,7 @@ export default function SignupScreen (props: SignupScreenProps) {
     console.log('email',email);
     console.log('senha',senha);
 
-    if (nome== 'Fellipe' && email == 'fellipe@gmail.com' && senha == '123456')
+    if (nome== '' && email == '' && senha == '')
         nav.navigate('Menu')
   else
   console.log('Email já cadastrado');

@@ -8,9 +8,9 @@ import {Formik} from 'formik';
 import { useNavigation } from '@react-navigation/core';
 import { List } from '../../components/list';
 
-export interface SettingScreenProps {}
+export interface EuScreenProps {}
 
-export default function SettingScreen (props: SettingScreenProps) {
+export default function EuScreen (props: EuScreenProps) {
 
   const nav = useNavigation()
 

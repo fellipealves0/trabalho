@@ -1,4 +1,6 @@
+import { useNavigation } from '@react-navigation/core';
 import * as React from 'react';
+import { TouchableOpacity } from 'react-native';
 import { View, Text } from 'react-native';
 import { ListItem} from 'react-native-elements'
 import Icon from 'react-native-vector-icons/FontAwesome';
@@ -7,7 +9,8 @@ export interface ListProps {
 }
 
 export function List (props: ListProps) {
-
+  
+    const nav = useNavigation()
     const List = [
         {
           title: 'Perfil',
@@ -18,8 +21,8 @@ export function List (props: ListProps) {
             icon: 'heart'
           },
         {
-          title: 'Endereços de Entrega',
-          icon: 'envelope'
+            title: 'Endereços de Entrega',
+            icon: 'envelope'
         },
         {
             title: 'Envie o meu pedido Para ',
@@ -48,16 +51,22 @@ export function List (props: ListProps) {
       ]
 
 return (
-      <View>
-          { List.map((item, i) => (
+     
+<TouchableOpacity>
+    <View>
+         { List.map((item, i) => (
       <ListItem key={i} bottomDivider>
         <Icon name={item.icon} />
         <ListItem.Content>
           <ListItem.Title>{item.title}</ListItem.Title>
+
         </ListItem.Content>
       </ListItem>
     ))
   }
-      </View>
+  
+     </View>
+</TouchableOpacity>
+
     );
 }
