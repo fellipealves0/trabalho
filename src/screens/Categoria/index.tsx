@@ -10,7 +10,7 @@ import {Formik} from 'formik';
 import { useNavigation } from '@react-navigation/core';
 import { Toolbar } from '../../components/toolbar';
 import SearchBar from '../../components/SearchBar';
-import { List } from '../../components/list';
+import { ListCategoria } from '../../components/listCategoria';
 
 export interface CategoriarScreenProps {
 }
@@ -23,7 +23,7 @@ export function CategoriarScreen (props: CategoriarScreenProps) {
 <View>
 
 <SearchBar/>
-<List/>
+<ListCategoria/>
 </View>
 
  </ImageBackground>
