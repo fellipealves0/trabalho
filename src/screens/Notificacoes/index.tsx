@@ -20,6 +20,10 @@ export function NotificacoesScreen (props: NotificacoesScreenProps) {
 
 <View>
 
+{<Icon style={styles.icon} name='bell'size={50} color='black'/>}
+<Text style={styles.container} > SEM NOTIFICAÇÕES NO MOMENTO </Text>
+
+
 
 </View>
 
@@ -28,8 +32,12 @@ export function NotificacoesScreen (props: NotificacoesScreenProps) {
 }
 
 const styles = StyleSheet.create({
-  container:{color:'black',fontSize:18,textDecorationLine: 'none', textAlign:'left', margin:30},
+  container:{color:'black',fontSize:28,textDecorationLine: 'none', textAlign:'center', padding:0},
   button:{margin:10},
-  image:{margin: 5, width: 150, height: 150 }
+  image:{margin: 5, width: 150, height: 150 },
+  icon:{textAlign:'center', paddingTop:80, marginTop:210},
+  voltar:{color:'black',fontSize:18,textDecorationLine: 'none', textAlign:'center', margin:50}
+
+
 });
 

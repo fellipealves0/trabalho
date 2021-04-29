@@ -24,6 +24,9 @@ export function CategoriarScreen (props: CategoriarScreenProps) {
 
 <SearchBar/>
 <ListCategoria/>
+
+<Text style={styles.container}> Últimos Acessos </Text>
+          <Image style={styles.image} source={require('./../../assets/foto1.jpg' )} PlaceholderContent={<ActivityIndicator />}/>
 </View>
 
  </ImageBackground>
@@ -35,8 +38,10 @@ export function CategoriarScreen (props: CategoriarScreenProps) {
 
 const styles = StyleSheet.create({
   container:{color:'black',fontSize:18,textDecorationLine: 'none', textAlign:'left', margin:30},
+  container1:{flexDirection:'row', marginTop: 21},
   button:{margin:10},
-  image:{margin: 5, width: 150, height: 150 }
+  image:{margin: 5, width: 150, height: 150,}
+ 
 });
 
 
