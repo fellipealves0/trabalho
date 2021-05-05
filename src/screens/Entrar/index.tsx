@@ -1,4 +1,4 @@
-// @ts-nocheck
+
 import * as React from 'react';
 import { ActivityIndicator, Linking, TouchableOpacity } from 'react-native';
 import {ImageBackground, StyleSheet, TextInput,Text,View, LogBox} from 'react-native';
@@ -8,6 +8,7 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 import {Formik} from 'formik';
 import { useNavigation } from '@react-navigation/core';
 import * as Yup from 'yup'
+import { useNetInfo } from '@react-native-community/netinfo';
 
 
 
@@ -17,7 +18,10 @@ export interface LoginScreenProps {}
 export default function LoginScreen (props: LoginScreenProps) {
  
     const nav = useNavigation()
+
     const [erro , setErro] = React.useState ('')
+
+    const netInfo = useNetInfo();
    
 
     const logar = async ({email,senha}: any) =>{ 
@@ -27,6 +31,10 @@ export default function LoginScreen (props: LoginScreenProps) {
             nav.navigate('Menu')
     else
     console.log ('Email e senha incorreto');
+    }
+
+    const recursoNativo = () =>{
+      console.log(netInfo.isConnected)
   }
 
   return (<ImageBackground source={require('./../../assets/fundo2.jpg')} style={{width:'100%',height:'100%'}}>
@@ -66,6 +74,8 @@ export default function LoginScreen (props: LoginScreenProps) {
       <SocialIcon type='google'onPress={async() => Linking.openURL('http://gmail.com')}/>
     </View>
 
+ <Button onPress={recursoNativo} title ="Testar conexão" />
+ 
 </View>
 )}
 
