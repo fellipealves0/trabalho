@@ -35,6 +35,7 @@ export default function LoginScreen (props: LoginScreenProps) {
 
     const recursoNativo = () =>{
       console.log(netInfo.isConnected)
+      console.log(netInfo.type)
   }
 
   return (<ImageBackground source={require('./../../assets/fundo2.jpg')} style={{width:'100%',height:'100%'}}>
@@ -74,8 +75,8 @@ export default function LoginScreen (props: LoginScreenProps) {
       <SocialIcon type='google'onPress={async() => Linking.openURL('http://gmail.com')}/>
     </View>
 
- <Button onPress={recursoNativo} title ="Testar conexão" />
- 
+    <Button style={styles.button1} title ="Testar conexão" buttonStyle={{borderRadius:30}} onPress={recursoNativo}/>
+
 </View>
 )}
 
@@ -89,6 +90,7 @@ const styles = StyleSheet.create({
     container: {flexDirection:'column',justifyContent:'center',alignItems: 'center',margin:8},
     erro:{textAlign:'left', marginLeft:190},
     button:{margin:20},
-    iconSocial:{flexDirection:'row', alignItems: 'center', justifyContent: 'center',margin:80},
+    button1:{marginRight:20, marginLeft:190},
+    iconSocial:{flexDirection:'row', alignItems: 'center', justifyContent: 'center',margin:30},
     cadastro:{color:'black',fontSize:18,textDecorationLine: 'none', textAlign:'center', margin:50}
 });
