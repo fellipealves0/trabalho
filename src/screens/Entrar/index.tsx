@@ -1,4 +1,4 @@
-
+// @ts-nocheck
 import * as React from 'react';
 import { ActivityIndicator, Linking, TouchableOpacity } from 'react-native';
 import {ImageBackground, StyleSheet, TextInput,Text,View, LogBox} from 'react-native';
@@ -9,7 +9,7 @@ import {Formik} from 'formik';
 import { useNavigation } from '@react-navigation/core';
 import * as Yup from 'yup'
 import { useNetInfo } from '@react-native-community/netinfo';
-
+import firebase from 'firebase';
 
 
 
@@ -37,6 +37,7 @@ export default function LoginScreen (props: LoginScreenProps) {
       console.log(netInfo.isConnected)
       console.log(netInfo.type)
   }
+
 
   return (<ImageBackground source={require('./../../assets/fundo2.jpg')} style={{width:'100%',height:'100%'}}>
 
