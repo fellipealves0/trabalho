@@ -25,6 +25,7 @@ export default function LoginScreen (props: LoginScreenProps) {
    
 
     const logar = async ({email,senha}: any) =>{ 
+      firebase.auth().
       console.log('Email',email);
       console.log('Senha',senha);
       if (email == 'fellipe@gmail.com' && senha == '123456')
