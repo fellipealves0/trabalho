@@ -24,7 +24,7 @@ export default function SignupScreen (props: SignupScreenProps) {
     console.log('senha',senha);
 
     if (email == '' && senha == '')
-        nav.navigate('Menu')
+        nav.navigate('Entrar')
   else
   console.log('Email já cadastrado');
 
