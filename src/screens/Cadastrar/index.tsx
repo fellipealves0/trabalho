@@ -55,7 +55,7 @@ return (<ImageBackground source={require('./../../assets/fundo2.jpg')} style={{w
   </View>
    
    <Button style={styles.button} title="Cadastrar" buttonStyle={{borderRadius:30}} onPress={() =>handleSubmit()}/>
-   <Button style={styles.button1} title ="Voltar" buttonStyle={{borderRadius:30}}onPress={() => {nav.navigate('Entrar')}}/>
+  
 
  <View style={styles.iconSocial}>
     <SocialIcon type='instagram' onPress={async() => Linking.openURL('http://instagram.com')}/>
