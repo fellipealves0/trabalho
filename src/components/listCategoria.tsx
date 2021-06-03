@@ -25,7 +25,7 @@ export function ListCategoria (props: ListCategoriaProps) {
             icon: 'envelope'
         },
         {
-            title: 'Unisex',
+            title: 'Unissex',
             icon: 'flag'
           },
           {

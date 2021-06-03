@@ -1,6 +1,6 @@
-
+// @ts-nocheck
 import * as React from 'react';
-import { ActivityIndicator, Linking, ToastAndroid } from 'react-native';
+import { ActivityIndicator, Linking } from 'react-native';
 import {ImageBackground, StyleSheet, TextInput,Text,View, LogBox} from 'react-native';
 import { Image } from 'react-native-elements/dist/image/Image';
 import { Button, Input, SocialIcon } from 'react-native-elements'
@@ -20,7 +20,8 @@ export default function SignupScreen (props: SignupScreenProps) {
  
   const cadastrar = ({email,senha}: any) =>{ 
     firebase.auth().createUserWithEmailAndPassword(email,senha);
-    ToastAndroid.show('Usuario Criado', ToastAndroid.LONG);
+    console.log('email',email);
+    console.log('senha',senha);
 
     if (email == '' && senha == '')
         nav.navigate('Entrar')

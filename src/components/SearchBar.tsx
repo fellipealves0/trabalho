@@ -1,3 +1,4 @@
+// @ts-nocheck
 import * as React from "react";
 import { SearchBar } from "react-native-elements";
 import {ImageBackground, StyleSheet, TextInput,Text,View, LogBox} from 'react-native';

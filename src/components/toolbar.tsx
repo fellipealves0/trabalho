@@ -13,11 +13,11 @@ export function Toolbar (props: ToolbarProps) {
     let leftComponent = <view/>
 
     if(props.menu)
-          leftComponent =   <Icon name = "menu"/>
-          
+          leftComponent = <Icon name = "bars"/>
+
     return <Header 
     centerComponent={{text:props.titulo, style:{fontSize:25}}}
-    containerStyle={{backgroundColor:'white'}}
+    containerStyle={{backgroundColor:'red'}}
     leftComponent={{}}
     
 />;
