@@ -18,12 +18,14 @@ export interface CategoriarScreenProps {
 export function CategoriarScreen (props: CategoriarScreenProps) {
     const nav = useNavigation()
   
-    return (<ImageBackground source={require('./../../assets/fundo2.jpg')} style={{width:'100%',height:'100%'}}>
+    return (<ImageBackground source={require('./../../assets/fundo3.jpg')} style={{width:'100%',height:'100%'}}>
 
 <View>
 
+<Toolbar titulo="CATEGORIAS" menu={true}/>
 <SearchBar/>
 <ListCategoria/>
+
 
 <Text style={styles.container}> Últimos Acessos </Text>
 <Image source={require('./../../assets/foto1.jpg')}
@@ -39,6 +41,7 @@ export function CategoriarScreen (props: CategoriarScreenProps) {
 
 const styles = StyleSheet.create({
   container:{color:'black',fontSize:18,textDecorationLine: 'none', textAlign:'left', margin:30},
+  toolbar:{backgroundColor:'black'},
   container1:{flexDirection:'row', marginTop: 21},
   button:{margin:10},
   image:{margin: 5, width: 150, height: 150, paddingVertical:80, padding:10}
