@@ -1,6 +1,9 @@
+import { DrawerActions, useNavigation } from '@react-navigation/core';
+import { DrawerContent } from '@react-navigation/drawer';
 import * as React from 'react';
 import { View, Text } from 'react-native';
 import { Header } from 'react-native-elements';
+import { TouchableOpacity } from 'react-native-gesture-handler';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
 export interface ToolbarProps {
@@ -11,14 +14,22 @@ export interface ToolbarProps {
 
 export function Toolbar (props: ToolbarProps) {
     let leftComponent = <view/>
+    
+    const nav = useNavigation();
 
     if(props.menu)
-          leftComponent = <Icon name = "bars"/>
+          leftComponent = 
+          <TouchableOpacity onPress={() => nav.dispatch(DrawerActions.openDrawer())}>
+          <Icon name= "bars" size={25}/>
+          
+          </TouchableOpacity>
+         
 
     return <Header 
     centerComponent={{text:props.titulo, style:{fontSize:25}}}
     containerStyle={{backgroundColor:'red'}}
-    leftComponent={{}}
+    leftComponent={leftComponent}
+
     
 />;
 }
