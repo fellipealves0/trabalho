@@ -18,10 +18,8 @@ export function Toolbar (props: ToolbarProps) {
     const nav = useNavigation();
 
     if(props.menu)
-          leftComponent = 
-          <TouchableOpacity onPress={() => nav.dispatch(DrawerActions.openDrawer())}>
-          <Icon name= "bars" size={25}/>
-          
+          leftComponent = <TouchableOpacity onPress={() => nav.dispatch(DrawerActions.openDrawer())}>
+              <Icon name= "bars" size={25}/>
           </TouchableOpacity>
          
 

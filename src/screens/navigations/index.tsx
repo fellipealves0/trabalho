@@ -2,7 +2,7 @@
 import * as React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import {NavigationContainer} from '@react-navigation/native'
-import {createDrawerNavigator} from '@react-navigation/drawer';
+import {createDrawerNavigator, DrawerItemList} from '@react-navigation/drawer';
 import {CardStyleInterpolators, createStackNavigator} from '@react-navigation/stack'
 import LoginScreen from '../Entrar';
 import SignupScreen from '../Cadastrar';
@@ -12,6 +12,11 @@ import EuScreen from '../Eu';
 import { CategoriarScreen } from '../Categoria';
 import { NotificacoesScreen } from '../Notificacoes'
 import Icon from 'react-native-vector-icons/FontAwesome';
+import { MasculinoScreen } from '../Categoria/Masculino';
+import { FemininoScreen } from '../Categoria/feminino';
+import { InfantilScreen } from '../Categoria/infantil';
+import { UnissexScreen } from '../Categoria/unissex';
+import { PersonalizeScreen } from '../Categoria/personalize';
 
 
 const Tab = createBottomTabNavigator();
@@ -65,20 +70,30 @@ export const MainNavigation = () => (
 
 
 const Drawer = createDrawerNavigator();
-export const DrawerMenu = () => (
-    <Drawer.Navigator>
+export const NavegacaoDrawer = () => (
+    <Drawer.Navigator
+       drawerContent={(props) =>  (
+         <view style = {{paddingTop:30, paddingLeft:10}}>
+            <text>Bem-Vindo</text>
+            <DrawerItemList {...props}/>
+            </view>
+       )}>
+
+      <Drawer.Screen name ="Categoria" component={CategoriarScreen} 
+      options = {{drawerIcon:() => <Icon name = "bars" size={20} />}}
+      />
+      
       <Drawer.Screen name ="Masculino" component={MasculinoScreen} 
       options = {{drawerIcon:() => <Icon name = "bars" size={20} />}}
       />
-    
       <Drawer.Screen name ="Feminino" component={FemininoScreen} />
 
-      
       <Drawer.Screen name ="Infantil" component={InfantilScreen} />
       
       <Drawer.Screen name ="Unissex" component={UnissexScreen} />
       
       <Drawer.Screen name ="Personalize" component={PersonalizeScreen} />
+
     </Drawer.Navigator>
   )
 
