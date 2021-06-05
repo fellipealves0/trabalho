@@ -2,7 +2,7 @@ import * as React from 'react';
 import { ActivityIndicator, Linking, TouchableOpacity } from 'react-native';
 import {ImageBackground, StyleSheet, TextInput,Text,View, LogBox} from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { NavigationContainer } from '@react-navigation/native';
+import { DrawerActions, NavigationContainer } from '@react-navigation/native';
 import { Image } from 'react-native-elements/dist/image/Image';
 import { Button, Input, SocialIcon } from 'react-native-elements'
 import Icon from 'react-native-vector-icons/FontAwesome';
@@ -22,14 +22,10 @@ export function CategoriarScreen (props: CategoriarScreenProps) {
 
 <View>
 
-<Toolbar titulo="CATEGORIAS" menu={true}/>
+<Toolbar titulo="CATEGORIAS" menu/>
+
 <SearchBar/>
-<ListCategoria/>
 
-
-<Text style={styles.container}> Últimos Acessos </Text>
-<Image source={require('./../../assets/foto1.jpg')}
-     style={{flex:1, padding:130,margin:7,}}/>
 </View>
 
  </ImageBackground>
