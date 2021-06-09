@@ -1,6 +1,7 @@
 //@ts-nocheck
 import * as React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { View, Text} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native'
 import {createDrawerNavigator, DrawerItemList} from '@react-navigation/drawer';
 import {CardStyleInterpolators, createStackNavigator} from '@react-navigation/stack'
@@ -49,7 +50,7 @@ export function MyTabs() {
       }}
     >
       <Tab.Screen name="Menu" component={HomeScreen}/>
-      <Tab.Screen name="Categoria" component={CategoriarScreen}/>
+      <Tab.Screen name="Categoria" component={NavegacaoDrawer}/>
       <Tab.Screen name="Notificações" component={NotificacoesScreen}/>
       <Tab.Screen name="Eu" component={EuScreen}/>
       
@@ -73,10 +74,10 @@ const Drawer = createDrawerNavigator();
 export const NavegacaoDrawer = () => (
     <Drawer.Navigator
        drawerContent={(props) =>  (
-         <view style = {{paddingTop:30, paddingLeft:10}}>
-            <text>Bem-Vindo</text>
+         <View style = {{paddingTop:30, paddingLeft:10}}>
+            <Text>Bem-Vindo</Text>
             <DrawerItemList {...props}/>
-            </view>
+            </View>
        )}>
 
       <Drawer.Screen name ="Categoria" component={CategoriarScreen} 

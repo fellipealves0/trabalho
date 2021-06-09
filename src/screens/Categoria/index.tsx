@@ -29,7 +29,7 @@ export function CategoriarScreen (props: CategoriarScreenProps) {
 
 <TouchableOpacity onPress={() => {nav.navigate('Categoria')}}>
            <Text style={styles.titulo}>Visto Recentemente</Text>
-    </TouchableOpacity>
+</TouchableOpacity>
 
     <Image style={styles.image1} source={require('./../../assets/foto2.jpg' )} PlaceholderContent={<ActivityIndicator />}/>
       <Text style={styles.nomeproduto}> Relógio Clássico</Text>

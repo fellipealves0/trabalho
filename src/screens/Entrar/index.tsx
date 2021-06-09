@@ -76,7 +76,6 @@ export default function LoginScreen (props: LoginScreenProps) {
       <SocialIcon type='google'onPress={async() => Linking.openURL('http://gmail.com')}/>
     </View>
 
-    <Button style={styles.button1} title ="Testar conexão" buttonStyle={{borderRadius:30}} onPress={recursoNativo}/>
 
 </View>
 )}
