@@ -27,6 +27,16 @@ export function CategoriarScreen (props: CategoriarScreenProps) {
 
 <SearchBar/>
 
+<TouchableOpacity onPress={() => {nav.navigate('Categoria')}}>
+           <Text style={styles.titulo}>Visto Recentemente</Text>
+    </TouchableOpacity>
+
+    <Image style={styles.image1} source={require('./../../assets/foto2.jpg' )} PlaceholderContent={<ActivityIndicator />}/>
+      <Text style={styles.nomeproduto}> Relógio Clássico</Text>
+      <Text style={styles.precode}> De R$ 1350,00 </Text>
+      <Text style={styles.nomeproduto}> Por R$ 350,00 </Text>
+      <Button style={styles.button} title ="Comprar" buttonStyle={{borderRadius:30}}/>
+
 </View>
 
  </ImageBackground>
@@ -37,10 +47,15 @@ export function CategoriarScreen (props: CategoriarScreenProps) {
 
 
 const styles = StyleSheet.create({
+  titulo:{color:'black',fontSize:20, fontWeight: "bold",textDecorationLine: 'none', marginBottom:20},
   container:{color:'black',fontSize:18,textDecorationLine: 'none', textAlign:'left', margin:30},
+  nomeproduto:{fontSize:18,textAlign:'center'},
+  precode:{fontSize:18,textAlign:'center', textDecorationLine: 'line-through' },
+  precopor:{fontSize:18,textAlign:'center'},
   toolbar:{backgroundColor:'black'},
   container1:{flexDirection:'row', marginTop: 21},
   button:{margin:10},
+  image1:{padding:150},
   image:{margin: 5, width: 150, height: 150, paddingVertical:80, padding:10}
  
 });
