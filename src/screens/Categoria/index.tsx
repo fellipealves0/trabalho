@@ -27,7 +27,7 @@ export function CategoriarScreen (props: CategoriarScreenProps) {
 
 <SearchBar/>
 
-<TouchableOpacity onPress={() => {nav.navigate('Produto')}}>
+<TouchableOpacity onPress={() => {nav.navigate('Categoria')}}>
            <Text style={styles.titulo}>Visto Recentemente</Text>
 </TouchableOpacity>
 
