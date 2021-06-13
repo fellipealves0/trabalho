@@ -13,25 +13,14 @@ import { Toolbar } from '../../components/toolbar';
 import SearchBar from '../../components/SearchBar';
 import { ListCategoria } from '../../components/listCategoria';
 
-export interface CategoriarScreenProps {
+export interface ProdutoScreenProps {
 }
 
-export function CategoriarScreen (props: CategoriarScreenProps) {
+export function ProdutoScreen (props: ProdutoScreenProps) {
     const nav = useNavigation()
   
     return (<ImageBackground source={require('./../../assets/fundo2.jpg')} style={{width:'100%',height:'100%'}}>
 
-<View>
-
-<Toolbar titulo="CATEGORIAS" menu={true}/>
-
-<SearchBar/>
-
-<TouchableOpacity onPress={() => {nav.navigate('Produto')}}>
-           <Text style={styles.titulo}>Visto Recentemente</Text>
-</TouchableOpacity>
-
-</View>
 
  </ImageBackground>
 );

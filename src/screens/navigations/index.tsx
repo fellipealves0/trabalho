@@ -13,7 +13,7 @@ import EuScreen from '../Eu';
 import { CategoriarScreen } from '../Categoria';
 import { NotificacoesScreen } from '../Notificacoes'
 import Icon from 'react-native-vector-icons/FontAwesome';
-import { MasculinoScreen } from '../Categoria/Masculino';
+import { MasculinoScreen } from '../Categoria/masculino';
 import { FemininoScreen } from '../Categoria/feminino';
 import { InfantilScreen } from '../Categoria/infantil';
 import { UnissexScreen } from '../Categoria/unissex';
@@ -80,20 +80,22 @@ export const NavegacaoDrawer = () => (
             </View>
        )}>
 
-      <Drawer.Screen name ="Categoria" component={CategoriarScreen} 
-      options = {{drawerIcon:() => <Icon name = "bars" size={20} />}}
-      />
+      <Drawer.Screen name ="Categoria" component={CategoriarScreen}/>
       
       <Drawer.Screen name ="Masculino" component={MasculinoScreen} 
-      options = {{drawerIcon:() => <Icon name = "bars" size={20} />}}
-      />
-      <Drawer.Screen name ="Feminino" component={FemininoScreen} />
+      options = {{drawerIcon:() => <Icon name = "bars" size={20} />}}/>
+    
+      <Drawer.Screen name ="Feminino" component={FemininoScreen} 
+      options = {{drawerIcon:() => <Icon name = "bars" size={20} />}}/>
 
-      <Drawer.Screen name ="Infantil" component={InfantilScreen} />
+      <Drawer.Screen name ="Infantil" component={InfantilScreen}
+      options = {{drawerIcon:() => <Icon name = "bars" size={20} />}} />
       
-      <Drawer.Screen name ="Unissex" component={UnissexScreen} />
+      <Drawer.Screen name ="Unissex" component={UnissexScreen}
+      options = {{drawerIcon:() => <Icon name = "bars" size={20} />}} />
       
-      <Drawer.Screen name ="Personalize" component={PersonalizeScreen} />
+      <Drawer.Screen name ="Personalize" component={PersonalizeScreen} 
+      options = {{drawerIcon:() => <Icon name = "bars" size={20} />}}/>
 
     </Drawer.Navigator>
   )
