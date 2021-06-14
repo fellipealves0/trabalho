@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { ActivityIndicator, Linking, TouchableOpacity } from 'react-native';
+import { ActivityIndicator, Linking, ScrollView, TouchableOpacity } from 'react-native';
 import {ImageBackground, StyleSheet, TextInput,Text,View, LogBox} from 'react-native';
 import { Image } from 'react-native-elements/dist/image/Image';
 import { Toolbar } from '../../components/toolbar';
@@ -8,18 +8,40 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 import { useNavigation } from '@react-navigation/core';
 import { useNetInfo } from '@react-native-community/netinfo';
 import firebase from 'firebase';
-import { ProdutoScreen } from '../../components/produto';
+
 
 
 export interface MasculinoScreenProps {
 }
 
 export function MasculinoScreen (props: MasculinoScreenProps) {
+
+  const nav = useNavigation()
+
   return (<ImageBackground source={require('./../../assets/fundo2.jpg')} style={{width:'100%',height:'100%'}}>
-        
+
+<ScrollView>      
+
  <Toolbar titulo="Masculino" menu={true}/>
 
-<ProdutoScreen/>
+
+<View>
+<Image style={styles.image} source={require('./../../assets/foto1.jpg' )} PlaceholderContent={<ActivityIndicator />}/>
+      <Text style={styles.nomeproduto}> Relógio Clássico</Text>
+      <Text style={styles.precode}> De R$ 1350,00 </Text>
+      <Text style={styles.nomeproduto}> Por R$ 350,00 </Text>
+      <Button style={styles.button} title ="Comprar" buttonStyle={{borderRadius:30}}/>
+
+      <Image style={styles.image} source={require('./../../assets/foto1.jpg' )} PlaceholderContent={<ActivityIndicator />}/>
+      <Text style={styles.nomeproduto}> Relógio Clássico</Text>
+      <Text style={styles.precode}> De R$ 1350,00 </Text>
+      <Text style={styles.nomeproduto}> Por R$ 350,00 </Text>
+      <Button style={styles.button} title ="Comprar" buttonStyle={{borderRadius:30}} onPress={() => {nav.navigate('Produto')}}/>
+</View>
+
+
+
+</ScrollView>
 
 </ImageBackground>
   

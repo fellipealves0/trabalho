@@ -18,6 +18,7 @@ import { FemininoScreen } from '../Categoria/feminino';
 import { InfantilScreen } from '../Categoria/infantil';
 import { UnissexScreen } from '../Categoria/unissex';
 import { PersonalizeScreen } from '../Categoria/personalize';
+import { ProdutoScreen } from '../Produto';
 
 
 const Tab = createBottomTabNavigator();
@@ -65,6 +66,7 @@ export const MainNavigation = () => (
            <Stack.Screen name= "Entrar" component={LoginScreen} />
            <Stack.Screen name= "Cadastrar" component={SignupScreen} />
            <Stack.Screen name= "Menu" component={MyTabs} />
+           <Stack.Screen name= "Produto" component={ProdutoScreen} />
         </Stack.Navigator>
     </NavigationContainer>
 )
