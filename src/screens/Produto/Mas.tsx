@@ -13,10 +13,10 @@ import { Toolbar } from '../../components/toolbar';
 
 
 
-export interface ProdutoScreenProps {
+export interface MasProdutoProps {
 }
 
-export function ProdutoScreen (props: ProdutoScreenProps) {
+export function MasProduto (props: MasProdutoProps) {
 
   const nav = useNavigation()
   

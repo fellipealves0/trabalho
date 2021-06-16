@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "862042602053",
+    "project_id": "trabalho-dc6b7",
+    "storage_bucket": "trabalho-dc6b7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:862042602053:android:749842e8ddaa537202812c",
+        "android_client_info": {
+          "package_name": "br.com.trabalho"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "862042602053-ne1mkji6v9ojf9v5u62kptjilnbvr90a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCI8QC-2fyeMmuG_7gR9PDSUleFwzvtYkE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "862042602053-ne1mkji6v9ojf9v5u62kptjilnbvr90a.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

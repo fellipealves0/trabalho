@@ -30,13 +30,7 @@ export function MasculinoScreen (props: MasculinoScreenProps) {
       <Text style={styles.nomeproduto}> Relógio Clássico</Text>
       <Text style={styles.precode}> De R$ 1350,00 </Text>
       <Text style={styles.nomeproduto}> Por R$ 350,00 </Text>
-      <Button style={styles.button} title ="Comprar" buttonStyle={{borderRadius:30}} onPress={() => {nav.navigate('Produto')}}/>
-
-      <Image style={styles.image} source={require('./../../assets/foto1.jpg' )} PlaceholderContent={<ActivityIndicator />}/>
-      <Text style={styles.nomeproduto}> Relógio Clássico</Text>
-      <Text style={styles.precode}> De R$ 1350,00 </Text>
-      <Text style={styles.nomeproduto}> Por R$ 350,00 </Text>
-      <Button style={styles.button} title ="Comprar" buttonStyle={{borderRadius:30}} onPress={() => {nav.navigate('Produto')}}/>
+      <Button style={styles.button} title ="Comprar" buttonStyle={{borderRadius:30}} onPress={() => {nav.navigate('Mas')}}/>
 </View>
 
 

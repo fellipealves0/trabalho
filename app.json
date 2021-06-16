@@ -27,13 +27,16 @@
       },
       "config": {
         "googleMobileAdsAppId": "ca-app-pub-4975312222370138~7240194919"
-      }
+      },
+      "package": "br.com.trabalho",
+      "versionCode": 1,
+      "googleServicesFile": ""
     },
     
     "web": {
       "favicon": "./assets/favicon.png"
     },
-    "description": ""
+    "description": "./google-services.json"
   },
   "infoPlist": {
     "NSFaceIDUsageDescription": "This app will optionally use Face ID or Touch ID to save login"

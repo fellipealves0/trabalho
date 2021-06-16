@@ -9,6 +9,8 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 import {Formik} from 'formik';
 import { useNavigation } from '@react-navigation/core';
 import { Toolbar } from '../../components/toolbar';
+import { AdMobBanner } from 'expo-ads-admob';
+
 
 
 export interface HomeScreenProps {
@@ -34,14 +36,14 @@ style={{padding:130,margin:7}}/>
       <Text style={styles.nomeproduto}> Relógio Clássico</Text>
       <Text style={styles.precode}> De R$ 1350,00 </Text>
       <Text style={styles.nomeproduto}> Por R$ 350,00 </Text>
-      <Button style={styles.button} title ="Comprar" buttonStyle={{borderRadius:30}}/>
+      <Button style={styles.button} title ="Comprar" buttonStyle={{borderRadius:30}} onPress={() => {nav.navigate('Masculino')}}/>
 
 
-      <Image style={styles.image} source={require('./../../assets/foto2.jpg' )} PlaceholderContent={<ActivityIndicator />}/>
-      <Text style={styles.nomeproduto}> Relógio Clássico</Text>
+      <Image style={styles.image} source={require('./../../assets/foto3.jpg' )} PlaceholderContent={<ActivityIndicator />}/>
+      <Text style={styles.nomeproduto}> Relógio De Pulso Amor é Sol Arco Ires</Text>
       <Text style={styles.precode}> De R$ 1350,00 </Text>
-      <Text style={styles.nomeproduto}> Por R$ 350,00 </Text>
-      <Button style={styles.button} title ="Comprar" buttonStyle={{borderRadius:30}}/>
+      <Text style={styles.nomeproduto}> Por R$ 450,00 </Text>
+      <Button style={styles.button} title ="Comprar" buttonStyle={{borderRadius:30}} onPress={() => {nav.navigate('Feminino')}}/>
 
       <TouchableOpacity onPress={() => {nav.navigate('Categoria')}}>
            <Text style={styles.titulo}>Lançamentos</Text>
@@ -50,8 +52,17 @@ style={{padding:130,margin:7}}/>
       <Image style={styles.image} source={require('./../../assets/foto2.jpg' )} PlaceholderContent={<ActivityIndicator />}/>
       <Text style={styles.nomeproduto}> Relógio Clássico</Text>
       <Text style={styles.precode}> De R$ 1350,00 </Text>
-      <Text style={styles.nomeproduto}> Por R$ 350,00 </Text>
-      <Button style={styles.button} title ="Comprar" buttonStyle={{borderRadius:30}}/>
+      <Text style={styles.nomeproduto}> Por R$ 250,00 </Text>
+      <Button style={styles.button} title ="Comprar" buttonStyle={{borderRadius:30}} onPress={() => {nav.navigate('Unissex')}}/>
+
+      
+    <AdMobBanner
+
+adUnitID= "ca-app-pub-4975312222370138/1796296541"
+bannerSize="fullBanner"
+
+/>
+
 </View>
 </ScrollView>
 

@@ -77,7 +77,7 @@ export default function LoginScreen (props: LoginScreenProps) {
     <AdMobBanner
 
      adUnitID= "ca-app-pub-4975312222370138/1796296541"
-     bannerSize="banner"
+     bannerSize="fullBanner"
 
     />
       
