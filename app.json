@@ -17,17 +17,25 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "expo"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
+      },
+      "config": {
+        "googleMobileAdsAppId": "ca-app-pub-4975312222370138~7240194919"
       }
     },
+    
     "web": {
       "favicon": "./assets/favicon.png"
     },
     "description": ""
+  },
+  "infoPlist": {
+    "NSFaceIDUsageDescription": "This app will optionally use Face ID or Touch ID to save login"
   }
 }
