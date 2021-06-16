@@ -1,4 +1,4 @@
-// @ts-nocheck
+//@ts-nocheck
 import * as React from 'react';
 import { ActivityIndicator, Linking, TouchableOpacity } from 'react-native';
 import {ImageBackground, StyleSheet, TextInput,Text,View, LogBox} from 'react-native';
@@ -9,7 +9,9 @@ import {Formik} from 'formik';
 import { useNavigation } from '@react-navigation/core';
 import * as Yup from 'yup'
 import { useNetInfo } from '@react-native-community/netinfo';
-import firebase from 'firebase';
+import { AdMobBanner } from 'expo-ads-admob';
+
+
 
 
 
@@ -41,6 +43,7 @@ export default function LoginScreen (props: LoginScreenProps) {
 
   return (<ImageBackground source={require('./../../assets/fundo2.jpg')} style={{width:'100%',height:'100%'}}>
 
+
 <Formik
     initialValues={{email:'', senha:''}}
     validationSchema={Yup.object().shape({
@@ -66,9 +69,17 @@ export default function LoginScreen (props: LoginScreenProps) {
 
     <Button style={styles.button} title="Entrar" buttonStyle={{borderRadius:30}}  onPress={() =>handleSubmit()}/>
 
+
     <TouchableOpacity onPress={() => {nav.navigate('Cadastrar')}}>
            <Text style={styles.cadastro}>Não possui cadastro? {'\n'} Clique aqui para se cadastrar</Text>
     </TouchableOpacity>
+
+    <AdMobBanner
+
+     adUnitID= "ca-app-pub-4975312222370138/1796296541"
+     bannerSize="banner"
+
+    />
       
    <View style={styles.iconSocial}>
       <SocialIcon type='instagram' onPress={async() => Linking.openURL('http://instagram.com')}/>
