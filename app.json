@@ -30,13 +30,13 @@
       },
       "package": "br.com.trabalho",
       "versionCode": 1,
-      "googleServicesFile": ""
+      "googleServicesFile": "google-services.json"
     },
     
     "web": {
       "favicon": "./assets/favicon.png"
     },
-    "description": "./google-services.json"
+    "description": ""
   },
   "infoPlist": {
     "NSFaceIDUsageDescription": "This app will optionally use Face ID or Touch ID to save login"
